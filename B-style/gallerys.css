@@ -1,0 +1,120 @@
+
+        *{
+            box-sizing: border-box;
+            
+        } 
+      
+        .header{
+            padding: 20px;
+            text-align: center;
+            background-image: url("/gallery/img/pexels-photo-2068411.jpeg");
+            color: orange;
+            font-size: 30px
+    
+        }
+
+        /* -- -----------  nav && a  --------- -- */
+        .nav{
+            background-color:silver;
+            display: flex;
+            justify-content: center;
+            color:rgb(255, 255, 255);
+    
+          
+    
+        }
+        .nav a{
+            text-decoration: none;
+            padding: 20px 15px 20px 15px;
+            text-align: center;
+            color: red;
+            font-size: 20px
+         
+        }
+        .nav a:hover{
+    
+            background-color:darkorange;
+            color: black;
+            transition: 500ms;  
+            border: 1px dotted black;
+        }
+
+
+
+   
+    /*         
+        .rowimg{
+            display: flex;
+            flex-wrap: wrap;
+            display: -ms-flexbox;
+            -ms-flex-wrap: wrap;
+        }
+
+        .rowimg div img{
+            flex: 25%;
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+
+        @media screen and  (max-width:800px){
+            .rowimg div img{
+            flex:50%;
+            max-width: 50%;
+        }
+        }
+
+        @media screen and (max-width:600px){
+            .rowimg div img{
+            flex:100%;
+            max-width: 100%;
+        }
+        }
+        
+            
+    */
+    body{
+        margin: 0 auto;
+    }
+
+    .row{
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
+
+    .coulmn{
+        border: 3px solid red;
+        flex: 20%;
+        max-width: 25%;
+        /* padding: 2px; */
+    }
+    .coulmn img{
+        width: 100%;
+        vertical-align: middle;
+        /* height: 25% */
+    }
+
+
+
+
+/* 
+    @media screen and (max-width:300px){
+        .coulmn{
+        flex:100%;
+        max-width: 100%;
+    }
+    }
+
+ */
+
+
+    @media screen and  (max-width:800px){
+        .coulmn{
+        flex:50%;
+        max-width: 50%;
+
+    }
+    }
+

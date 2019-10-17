@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <style>
+      #imgid{
+        position: relative;
+        height: 300px;
+        width: 300px;
+        float: right;
+        z-index: -1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <button>Move</button><br />
+    </div>
+    <div>
+      <button>Click</button>
+    </div>
+    <img id="cats" src="http://lorempixel.com/640/480/cats" alt="" />
+    <script>
+      // console.log(this);
+      //----------------------------------------------------------------------------
+      let person = {
+        firstName: "Ahmad",
+        lastName: "Nahlawi",
+        telefon: 1787299500,
+        address: "Raja-ilinauk" + 33,
+        work: "Freelancer",
+        allInfo: function() {
+          console.log(this.age);
+          // return;
+        }
+      };
+      // person.hoppy = 'Programming';  //added a new propertie to x object
+
+      // person.getHoppy =function(){   //added a new method to x object
+      // console.log(this.hoppy);
+      // }
+      // person.getHoppy();
+      // console.log(person.allInfo())
+
+      let car = {
+        age: "44",
+        color: "red",
+        model: "A6"
+      };
+
+      // console.log(person.allInfo.call(car)); //use old Function to new object
+      //----------------------------------------------------------------------------------
+
+      let body = document.querySelector("body");
+
+      let btn = document.querySelectorAll("button")[1];
+    //   btn.style.position = "relative";
+    //   btn.style.left = "50px";
+    //   btn.style.top = "50px";
+
+    //   function keyframeExample() {
+    //     0%   {background-color:red; left:0px; top:0px;}
+    //     25%  {background-color:yellow; left:200px; top:0px;}
+    //     50%  {background-color:blue; left:200px; top:200px;}
+    //     75%  {background-color:green; left:0px; top:200px;}
+    //     100% {background-color:red; left:0px; top:0px;}
+    //   }
+
+function animationJS(){
+        let x = Math.floor(Math.random()  * 300)+ " px" ;
+        let y= Math.floor(Math.random()  * 300) +" px" ;
+    document.getElementById('cats').animate(
+        [
+           { transform:'translateX(x,y)'},
+        
+           { transform:'translate(x,y)'},
+
+           { transform:'translate('+ Math.random() * 300 +'px)'},
+           { transform:'translateY(0px)'}
+        ],
+        { 
+            duration :1000,
+            iterations:Infinity
+        }        
+    );
+}
+
+
+
+    //   let imgcats = document.getElementById('');
+      btn.addEventListener("click", function() {
+        // this.style.left = parseInt(this.style.left) + 10 + 'px';
+        // this.style.left = parseInt(this.style.left) + 10 + "px";
+        // this.style.top = parseInt(this.style.top) + 10 + "px";
+        // // this.remove();
+        // body.children[0].remove(this);
+        //--------------------------------------------
+        // imgcats.style.width = '100px';
+        // imgcats.style.height = '100px';
+        // imgcats.style.position = 'relative';
+        // imgcats.style.animationName = keyframeExample();
+        // imgcats.style.animationDuration = '4s';
+            animationJS();
+
+      });
+
+
+
+
+      let btn2 = document.querySelectorAll("button")[0];
+
+      let img = document.querySelector("img");
+      img.style.display = "none";
+      img.style.position = "absolute";
+      img.style.left = "50px";
+      img.style.transition = "all 500ms";
+      btn2.addEventListener("click", function() {
+        img.style.display = "block";
+
+        setInterval(function() {
+          img.style.left = parseInt(img.style.left) + 20 + "px";
+        }, 5);
+      });
+
+      // window.onload = function(){
+
+      // }
+
+    </script>
+  </body>
+</html>

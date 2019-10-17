@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #parentDiv{
+        float: right;
+        width: 400px;
+        border: 1px solid black;
+        height: 400px;
+    }
+    p{
+        font-size: 20px
+    }
+    </style>
+</head>
+<body>
+    <p>input your pass: <input type="text" id="pass"> </p> 
+    <button type="button" onclick="validate()" >Enter</button>
+   
+    
+    <div id="parentDiv"></div>
+    <p id="para"></p>
+    <!-- <p>First : <input type="text" id="first_number"></p>
+    <p>Secund: <input type="text" id="secund_number"></p>
+    <button type="button" onclick="divide()">Du</button> -->
+
+<script> 
+function validate(){
+/* var.value.lenght < 6 */
+let pass = document.getElementById('pass');
+
+
+    try{ 
+if (!pass.match("[$%!\"]"))
+        
+
+         console.log("Here:" + pass.value.length);
+        if (pass.value.length > 0 && pass.value.length < 5) throw ' Your pass is to weak';
+        if (pass.value.length == 0) throw ' you didint wrote any thing!';
+        if (pass > 20) throw ' your pass is to strong';
+
+        // if (!pass.length.includes('!') ||
+        //     !pass.length.includes('@') || 
+        //     !pass.length.includes('#') ||
+        //     !pass.length.includes('?') ) throw ' your pass doesnot have any << !|@|#|? >>';
+
+        // else {throw 'Currect';}
+
+    }
+
+    catch(err){
+        // console.error('Catched! ' + err); 
+        document.getElementById('para').innerHTML = 'Catched! '+ err;
+        
+    }  
+        let childEement = document.createElement('p');
+
+        let textNode = document.createTextNode('You Wrote: '+  pass.value);
+        childEement.appendChild(textNode);
+
+        let parentElement = document.getElementById('parentDiv');
+        parentElement.appendChild(childEement);
+ 
+}
+
+// function divide (){
+
+//     try{
+
+//         let first_number = document.getElementById('first_number').value;
+//         let secund_number = document.getElementById('secund_number').value;
+
+//         if (secund_number == 0 ) throw 'you cant devide by 0!';
+//         if(isNaN(first_number/secund_number)) throw 'Probably data cintains a string';
+//         console.log (first_number / secund_number) ;
+
+//     }
+
+//     catch(err){
+//         // console.error('Stop!' + err.name);
+//         console.error('chached! ' + err);
+//     }
+
+// }
+</script>
+</body>
+</html>

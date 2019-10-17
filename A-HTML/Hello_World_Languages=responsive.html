@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Styling responsiveDivs</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Var Future = "Computer_Languages";</h1>  
+    </header>
+
+    <nav>
+       
+        <a href="">Low&Middle Languages</a>
+        <a href="">Contact</a>
+        <a href="">About</a>
+
+    </nav>
+   <main>  
+
+
+
+        <details style="border: 1px solid black">
+                <summary>
+                        Machine code
+                </summary>
+        <p>
+                <article>
+                <br><br><h5> <ins>Machine code:</ins></h5> is the only language a computer can process directly without a previous transformation. Currently, programmers almost never write programs directly in machine code, because it requires attention to numerous details that a high-level language handles automatically. Furthermore it requires memorizing or looking up numerical codes for every instruction, and is extremely difficult to modify.
+                True machine code is a stream of raw, usually binary, data. A programmer coding in "machine code" normally codes instructions and data in a more readable form such as decimal, octal, or hexadecimal which is translated to internal format by a program called a loader or toggled into the computer's memory from a front panel.
+                Although few programs are written in machine language, programmers often become adept at reading it through working with core dumps or debugging from the front panel. <h5>Example:</h5> A function in hexadecimal representation of 32-bit x86 machine code to calculate the nth Fibonacci number: 
+                <pre>
+                8B542408 83FA0077 06B80000 0000C383
+                FA027706 B8010000 00C353BB 01000000
+                B9010000 008D0419 83FA0376 078BD989
+                C14AEBF1 5BC3
+                </pre>    
+                </article>
+        </p>
+        </details>
+
+  
+
+
+
+
+<details style="border: 1px solid black">
+        <summary>
+                Binary code
+        </summary>
+<p>
+        <article>
+                <ins><h5>  Binary code:</h5></ins>  
+                A binary code represents text, computer processor instructions, or any other data using a two-symbol system. The two-symbol system used is often "0" and "1" from the binary number system. The binary code assigns a pattern of binary digits, also known as bits, to each character, instruction, etc. For example, a binary string of eight bits can represent any of 256 possible values and can, therefore, represent a wide variety of different items.In computing and telecommunications, binary codes are used for various methods of encoding data, such as character strings, into bit strings. Those methods may use fixed-width or variable-width strings. In a fixed-width binary code, each letter, digit, or other character is represented by a bit string of the same length; that bit string, interpreted as a binary number, is usually displayed in code tables in octal, decimal or hexadecimal notation. There are many character sets and many character encodings for them.A bit string, interpreted as a binary number, can be translated into a decimal number. For example, the lower case a, if represented by the bit string 01100001 (as it is in the standard ASCII code), can also be represented as the decimal number "97". <br>        
+                <h5><ins>A low-level programming language:</ins></h5> is a programming language that provides little or no abstraction from a computer's instruction set architecture—commands or functions in the language map closely to processor instructions. Generally this refers to either machine code or assembly language. The word "low" refers to the small or nonexistent amount of abstraction between the language and machine language; because of this, low-level languages are sometimes described as being "close to the hardware". Programs written in low-level languages tend to be relatively non-portable.
+                Low-level languages can convert to machine code without a compiler or interpreter— second-generation programming languages use a simpler processor called an assembler— and the resulting code runs directly on the processor. A program written in a low-level language can be made to run very quickly, with a small memory footprint. An equivalent program in a high-level language can be less efficient and use more memory. Low-level languages are simple, but considered difficult to use, due to numerous technical details that the programmer must remember. By comparison, a high-level programming language isolates execution semantics of a computer architecture from the specification of the program, which simplifies development.
+                Low-level programming languages are sometimes divided into two categories: first generation and second generation.
+
+
+                <h5><ins>Low-level programming in high-level languages</ins></h5>
+                In the late 1960s, high-level languages such as PL/S, BLISS, BCPL, extended ALGOL (for Burroughs large systems) and C included some degree of access to low-level programming functions. One method for this is Inline assembly, in which assembly code is embedded in a high-level language that supports this feature. Some of these languages also allow architecture-dependent compiler optimization directives to adjust the way a compiler uses the target processor architecture. For example low level language is known as c and 'O' level language.
+        </article>
+</p>
+</details>
+<!-- ___________________________________________________________________________________________________________________________________________________________________ -->
+<details style="border: 1px solid black">
+            <summary>
+                    Assembly
+            </summary>
+    <p>
+        <article>
+        <ins><h5>Assembly:</h5></ins>
+        Second-generation languages provide one abstraction level on top of the machine code. In the early days of coding on computers like the TX-0 and PDP-1, the first thing MIT hackers did was write assemblers.[1] Assembly language has little semantics or formal specification, being only a mapping of human-readable symbols, including symbolic addresses, to opcodes, addresses, numeric constants, strings and so on. Typically, one machine instruction is represented as one line of assembly code. Assemblers produce object files that can link with other object files or be loaded on their own.
+        Most assemblers provide macros to generate common sequences of instructions.
+        </article>
+    </p>
+
+    <details style="border: 1px solid black">
+            <summary>
+                Code in Assembly and C
+            </summary>
+               
+        <details style="border: 1px solid black">
+        <summary>
+                                            Assembly Code
+        </summary>
+    
+        <p>
+        <pre>
+        fib:
+        mov edx, [esp+8]
+        cmp edx, 0
+        ja @f
+        mov eax, 0
+        ret
+    
+        @@:
+        cmp edx, 2
+        ja @f
+        mov eax, 1
+        ret
+    
+        @@:
+        push ebx
+        mov ebx, 1
+        mov ecx, 1
+    
+        @@:
+            lea eax, [ebx+ecx]
+            cmp edx, 3
+            jbe @f
+            mov ebx, ecx
+            mov ecx, eax
+            dec edx
+        jmp @b
+    
+        @@:
+        pop ebx
+        ret
+        </pre> 
+        </p>
+    </details>
+    
+    
+    
+    <details style="border: 1px solid black">
+            <summary>
+                The same code in C
+            </summary>
+    <p>
+        <pre>
+        unsigned fib(unsigned n) {
+        if (!n)
+        return 0;
+        else if (n <= 2)
+        return 1;
+        else {
+        unsigned a, c;
+        for (a = c = 1; ; --n) {
+        c += a;
+        if (n <= 3) return c;
+        a = c - a;
+        }
+        }
+        }
+        </pre>
+    </p>
+    </details>
+</details>
+</details> 
+
+
+
+
+<!-- ___________________________________________________________________________________________________________________________________________________________________ -->
+
+ 
+
+
+
+
+
+
+
+    <!-- <div style="float:right;border: 1px solid black;">
+            <h1 style="background-color:gray">Memu</h1>
+        <div style="border: 1px solid black">
+                FirstName<input type="text"><br>
+                SecundName<input type="text">
+        </div>
+            <div style="border: 1px solid black">
+                EmailAddress<input type="text"><br>
+                State<input type="text">
+            </div>
+        </div> -->
+
+        
+    
+
+
+</main>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

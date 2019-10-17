@@ -1,0 +1,75 @@
+/* --------------------------------------div1-------------------------------------------- */
+.div1{
+    /* -------------animation-------------------- */
+    animation-name: animation-div1;
+    animation-duration: 1s;   
+    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate-reverse; */
+
+    /* --------------------------------- */  
+
+    /* animation-delay: 2s; */
+
+    width: 75px;
+    height: 75px;
+    margin-top:50px;
+    background-color: yellow;
+    }
+
+
+@keyframes animation-div1{
+            
+    from    {
+            background:yellow ;
+            background-image: url('/logos/facebook.png');
+            }
+
+    to      {
+            background: violet;
+            background-image: url('/logos/twitter.png');
+            width: 75px;
+            height: 75px;
+            transform: 
+            /* translate(200px,200px) */
+            rotateY(180deg)
+            /* rotateX(180deg); */
+    }
+}
+
+ 
+
+ 
+
+
+
+
+
+
+/* --------------------------------------div2-------------------------------------------- */
+
+
+
+.div2{
+    /* --------------------------------- */
+    animation-name: animation-div2;
+    animation-duration: 1s; 
+    /* --------------------------------- */
+
+
+
+    width: 100px;
+    height: 100px;
+    margin-top:50px;
+    background-color: yellow;
+
+    }
+
+@keyframes animation-div2{
+    from    {background:yellow ;}
+    to      {background: violet;width: 500px;}
+    
+    }
+
+
+/* ---------------------------------------------------------------------------------- */

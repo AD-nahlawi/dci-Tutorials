@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,OAAO,SAAS,EAAE,KAAK;EACtD,AAAA,eAAe,CAAA;IACb,KAAK,EAAC,IAAI;GACX;;;AAGH,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EACjC,AAAA,eAAe,CAAA;IACb,KAAK,EAAC,GAAG;GACV;;;AAMH,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EACjC,AAAA,eAAe,CAAA;IACb,KAAK,EAAC,GAAG;GACV",
+    "sources": [
+        "resphonsive.scss"
+    ],
+    "names": [],
+    "file": "resphonsive.css"
+}

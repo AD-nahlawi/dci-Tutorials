@@ -1,0 +1,26 @@
+nav{
+
+    ul{
+    text-align: $textA;
+    text-decoration: $non;
+        li{
+        display: $disIB;
+            a{
+            text-align: $textA;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-decoration: none;
+            color: rgb(0, 0, 0); 
+            transition: ease-in-out 600ms;
+            }
+            a:hover{
+            background-color: chocolate;
+            margin: 50px;
+            @include href_a;
+            
+            }
+        }
+    }
+}
+

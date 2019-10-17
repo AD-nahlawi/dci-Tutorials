@@ -1,0 +1,15 @@
+$bg:gray;
+$tx-color:darkblue;
+
+body{
+    background: $bg;
+    color: $tx-color;
+} 
+
+div{
+    text-align: center;
+    h1{
+        font-family: Verdana;
+        color: red;
+    }
+}

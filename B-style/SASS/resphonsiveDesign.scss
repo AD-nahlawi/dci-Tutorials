@@ -1,0 +1,190 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    // line-height: 1.7;
+    padding: 5px;
+}
+// .menu{
+
+//     height: 100vh;
+//     width: 100vw;
+//     background-color: lightblue;
+//     border: 1px solid black;
+//     clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
+//     background-image:linear-gradient(to right, rgba(97, 34, 34, 0.623)),url('hero.jpg');
+//     // background-image:linear-gradient(to right, rgba(126, 213, 115, 0.5)),url('/Resphonsive_design/index1/hero.jpg');
+//     text-align: center;
+//     // transform: translate(-50%,-50%);
+              
+
+//         .first_span{
+//             letter-spacing: 1.5em;
+//             color: red;
+//             display: block;
+//             text-transform: uppercase;
+//             font-size: 3em;
+//         }
+//         .secund_span{
+//             color: blue;
+//             display: block;
+//             font-size: 2rem;
+
+//         }
+// }
+
+
+
+
+
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-image:linear-gradient(to right, rgba(97, 34, 34, 0.623)),url('hero.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path:polygon(0 0, 100% 0, 100% 79%, 0% 100%);
+    position: relative;
+    .logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        img {
+        height: 35px;
+        }
+    }
+
+
+
+    .header-text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        .first-text {
+        color: #ffffff;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 4em;
+        font-weight: 400;
+        backface-visibility: hidden;
+        }
+        .second-text {
+        display: block;
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        backface-visibility: hidden;  
+        }
+    }
+    
+}
+.navigation-icon{   
+position: relative;
+margin-top: 28px;
+left: 10px;
+
+
+}
+
+.navigation-icon::before,.navigation-icon::after,.navigation-icon{   
+    content: '';
+
+    // display: inline-block;
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+
+}
+
+
+.navigation-icon::before{
+    position: absolute;
+    left: -0px;
+    top :-9px;
+}
+.navigation-icon::after{
+    position: absolute;
+    left: -0px;
+    top: 8px;
+
+}
+
+.navigation-button:hover .navigation-icon::before{top: -13px;}
+.navigation-button:hover .navigation-icon::after{top: 13px;}
+.navigation-checkbox:checked ~ .navigation-background{transform: scale(10);}
+
+
+.navigation-checkbox{
+display: none;
+}
+
+
+
+
+
+
+.navigation-background{    position: fixed;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    top: 59px;
+    right: 20px;
+    z-index: 1;
+
+    background-image: radial-gradient(rgba(100, 56, 56, 0.623),rgb(27, 27, 27));
+    transition: all 700ms cubic-bezier(0.86,0,0.07,1);
+
+}
+
+.navigation-button{
+
+position: fixed;
+width: 60px;
+height: 60px;
+background-color:darkblue ;
+border-radius: 50%;
+top: 60px;
+right: 20px;
+z-index: 2;
+}
+
+
+
+
+//  <!DOCTYPE html>
+//  <html lang="en">
+//  <head>
+//      <link rel="stylesheet" href="style.css">
+//      <meta charset="UTF-8">
+//      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+//      <title>Document</title>
+//  </head>
+//  <body>
+ 
+//      <div class="menu">
+//      <img class="menu_logo" src="/Resphonsive_design/index1/logo-white.png" alt="">
+//      <span class="first_span">Outdoors</span>
+//      <span class="secund_span">Is where life happens</span>
+//      </div>
+ 
+   
+ 
+ 
+ 
+ 
+ 
+//  </body>
+//  </html>
+ 

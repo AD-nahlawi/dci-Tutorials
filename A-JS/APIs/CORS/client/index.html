@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fetch sources</title>
+</head>
+<body>
+
+<img src="http://192.168.8.137:3000/hamburg.png" alt="">
+
+
+<script>
+    
+    let fetchAPI = async function(){
+        const response =  await fetch('http://192.168.8.137:3000/states');
+        const myJSON = await response.json();
+        console.log(JSON.stringify(myJSON));
+    }
+    
+</script>
+</body>
+</html>

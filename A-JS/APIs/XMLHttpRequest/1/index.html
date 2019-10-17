@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Com;patible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/BS.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <style>
+    .card{
+        float: right;
+        margin-right: 1%;
+    }#buttons_div{
+        position: fixed;
+        left: 50px;
+        top: 25px;
+        border: 1px solid black;
+        width: 40%;
+        height: 300px;
+    }#get_jokes, #GET_JSON, #GET_API{
+        margin-top: 1px;
+        width: 100%;
+    }textarea{
+        width: 100%;
+        height: 200px;
+    }
+    input{
+        width: 100%;
+    }
+    </style>
+    
+</head>
+
+<body>
+
+<div class="border" id="buttons_div">
+    <!-- <button id="GET_JSON" class="btn btn-primary">GET JSON</button>
+    <button id="GET_API" class="btn btn-primary">GET API</button> -->
+
+    <form>
+        <div>
+            <label for="">number of jokes</label>
+            <input id="number_of_jokes" type="number">
+            <button id="get_jokes" class="btn btn-dark">GET_jokes</button>
+        </div>
+        <!-- <div>
+            <textarea id="textarea" id="" cols="30" rows="10"></textarea>
+        </div> -->
+        <!-- <input type="submit" value="submit"> -->
+    </form> 
+</div>
+
+<script>
+
+let number_of_jokes = document.querySelector('#number_of_jokes');
+let get_jokes = document.querySelector('#get_jokes');
+    get_jokes.addEventListener('click',getJoke_fetch_Request);
+
+        function getJoke_Xml_HttpRequest(e){
+        e.preventDefault();
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET',`http://api.icndb.com/jokes/random/${number_of_jokes.value}`,true);
+        xhr.onload = function(){
+            if(this.status === 200){
+                console.log('status: ' + this.status);
+                let response = JSON.parse(this.responseText);
+                console.log(response);
+                let output = '';
+                let card = document.createElement('div');
+                document.body.appendChild(card);
+                card.classList = 'w-50 card text-left';
+                if(response.type == 'success'){
+                    response.value.forEach(function(item){
+                    output += '<li>' + item.joke + '</li>';
+                    
+                    card.innerHTML = output;
+                    });
+                }
+            }
+        }
+        xhr.send();
+ }
+
+ function getJoke_fetch_Request(e){
+    e.preventDefault();
+
+    fetch(`http://api.icndb.com/jokes/random/${number_of_jokes.value}`)
+    .then(function(json){
+
+       return json.json();
+
+    }).then(function(r){
+
+        //  if(r.status === 200){
+                console.log('status: ' + r.type.status);
+
+                let output = '';
+                let card = document.createElement('div');
+                document.body.appendChild(card);
+                card.classList = 'w-50 card text-left';
+
+                if(r.type == 'success'){
+                    r.value.forEach(function(item){
+                    output += '<li>' + item.joke + '</li>';
+                    
+                    card.innerHTML = output;
+                    });
+                }
+
+        // }
+    })
+ }
+        
+        /*  let card = document.createElement('div');
+                document.body.appendChild(card);
+                card.classList = 'w-50 card text-left';
+    
+            let card_body = document.createElement('div');
+                card.appendChild(card_body);
+                card_body.classList = 'card-body';
+
+            let card_title = document.createElement('h5');
+                card_body.appendChild(card_title);
+                card_title.classList = 'card-title';
+
+                card_title.innerHTML = `title:${each.title} ||| and id: ${each.id}  <br>`;
+
+            let card_text = document.createElement('p');
+                card_body.appendChild(card_text);
+                card_text.classList = 'card-text';
+
+                card_text.innerHTML =` body:<br> ${each.body}`;
+    */
+            // let card_img = document.createElement('img');
+            //     card.appendChild(card_img);
+            //     card_img.classList = 'card-img-top';
+
+            //     card_img.src = each.url;
+
+
+   
+  
+
+    </script>
+
+</body>
+</html>
+

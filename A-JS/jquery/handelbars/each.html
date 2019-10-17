@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>img{height: 300px;width: 300px;}</style>
+    <title>each</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/BS.css">
+
+    <script src="/jQuery.js"></script>
+    <script src="/handlebars-v4.2.0.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.amd.js" integrity="sha256-3kxR8/pBMzxMmFE0dlAznCHQiKePdjnZ+Ul0qVcTdzg=" crossorigin="anonymous"></script> -->
+    <script src="/BS.js"></script>
+
+</head>
+<body>
+        <script id="hb-objects" type="text/x-handlebars-template">
+            <div class="card-deck">
+                {{#each cards}}
+                    <div class="card">
+                        <h4 class="card-title">{{this.h4}}</h4>
+                        <img class="card-img-top" src="{{this.img}}" alt="">
+                        <div class="card-body">
+                            <p class="card-text">{{this.p}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </script> 
+<script> 
+    let template = $('#hb-objects').html();
+    let templateScript = Handlebars.compile(template);
+var context1 = {
+        'cards':[
+                {                   
+                    'h4':'Sergio',
+                    'img':'1210613.jpg-c_215_290_x-f_jpg-q_x-xxyxx.jpg',
+                    'p':'Álvaro Morte: Álvaro Antonio García (born February 23, 1975), known professionally as Álvaro Morte, is a Spanish actor. He recently gained worldwide recognition playing the role of Sergio "El Profesor"',
+                },
+                {
+                    'h4':'Raquel Murillo',
+                    'img':'haus-des-geldes-mit-itziar-ituno.jpg',
+                    'p':'Itziar Ituño: Itziar Ituño Martínez (born June 18, 1974) is a Spanish actress. She is best known for her role as Inspector Raquel Murillo in the Spanish television series Money Heist (La casa de papel).',
+                },                  
+                {
+                    'h4':'Raquel Murillo',
+                    'img':'haus-des-geldes-mit-itziar-ituno.jpg',
+                    'p':'Itziar Ituño: Itziar Ituño Martínez (born June 18, 1974) is a Spanish actress. She is best known for her role as Inspector Raquel Murillo in the Spanish television series Money Heist (La casa de papel).',
+                },                  
+                {
+                    'h4':'Raquel Murillo',
+                    'img':'haus-des-geldes-mit-itziar-ituno.jpg',
+                    'p':'Itziar Ituño: Itziar Ituño Martínez (born June 18, 1974) is a Spanish actress. She is best known for her role as Inspector Raquel Murillo in the Spanish television series Money Heist (La casa de papel).',
+                },                  
+                {
+                    'h4':'Raquel Murillo',
+                    'img':'haus-des-geldes-mit-itziar-ituno.jpg',
+                    'p':'Itziar Ituño: Itziar Ituño Martínez (born June 18, 1974) is a Spanish actress. She is best known for her role as Inspector Raquel Murillo in the Spanish television series Money Heist (La casa de papel).',
+                },           
+            ],
+};
+let html = templateScript(context1);
+$(document.body).append(html);
+</script>
+</body>
+</html>
+

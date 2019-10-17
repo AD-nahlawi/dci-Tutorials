@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" id="myid"> -->
+
+<script>
+    
+    try{
+    // let myvar = 10;
+    // let myvar = 20;
+    // console.log(myvar)
+    let x = document.getElementById('myid').value;
+    console.log(x);
+
+    }catch (err){
+        console.error('something went worng!');
+        console.error('Error name:' + err.name);
+        console.error('Error masange:' + err.message);
+    }finally{
+        alert('i still alive');
+    }
+
+    </script>
+
+</body>
+</html>

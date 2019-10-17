@@ -1,0 +1,46 @@
+.main{
+    height: 500px;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    /* position:  relative; */
+    /* vertical-align: middle; */
+}
+@keyframes movetop{
+    from    {transform: translateY(100px); opacity:0;}
+    to      {transform: translateY(0px); opacity:1;}
+}
+.btn{    position: relative;
+    border-radius: 27px;
+    padding: 10px 30px;
+    display:inline-block;
+    top: 45%;
+    text-decoration: none;
+    background-color: white;
+    animation-name: movetop;
+    animation-duration: 1s;
+    /* animation-delay: 1s; */
+    text-transform: uppercase;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+.btn::after{    position: absolute;
+    content: '';
+    transition: all 500ms;
+    /* border: 1px solid black; */
+    /* padding: 10px 30px; */
+    /* background-color: black; */
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 27px;
+    z-index: -1;
+}
+.btn:hover::after{
+    content:attr(info);
+    transform: scaleX(2.2) scaleY(4.7);
+    opacity:0.5 ;
+    border-radius: 27px;
+    background-color: white;
+}

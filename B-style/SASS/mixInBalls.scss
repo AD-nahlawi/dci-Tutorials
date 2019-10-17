@@ -1,0 +1,60 @@
+@mixin setSize ($height, $width, $borderR ){
+    height: $height;
+    width: $width;
+    border-radius:$borderR;  
+}
+@mixin setbord ($Bcolor, $bord){
+    background-color: $Bcolor;
+    border: $bord;
+}
+@mixin animation() {
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-delay: 500ms;
+    animation-name: my-animation;
+
+    @keyframes my-animation {
+
+        // 0%{ background-color: white;left:0px; top:0px; border-radius: 0 0 0 0;}
+        // 25%{ background-color:red;left:300px; top:0px; border-radius: 50% 0 0 0;}
+        // 50%{ background-color:green; left:300px; top: 300px; border-radius: 50% 50% 0 0;}
+        // 75%{ background-color:aqua; left:0px; top:300px; border-radius: 50% 50% 50% 0;}
+        // 100%{ background-color:white; left:0; top:0px; border-radius:50% 50% 50% 50%;}
+
+       from{background-color: darkcyan;}
+        to{
+            background-color: blue;
+            margin-left:800px;
+            margin-bottom: 150px;
+            width: 600px;
+        }
+    }
+}
+
+
+
+.ball-1{
+    margin-left: 20%;
+    @include setbord(darkblue,1px solid black );
+    @include setSize(150px,150px ,50% );
+    @include animation();
+
+}
+
+
+.ball-2{
+    @include setbord(blue,1px solid black );
+    @include setSize(150px,150px ,50% );
+    @include animation();
+
+}
+
+
+.ball-3{
+    margin-left:30%;
+    @include setbord(lightblue,1px solid black );
+    @include setSize(150px,150px ,50% );
+    @include animation();
+
+}
+

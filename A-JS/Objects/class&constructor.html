@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" onclick="document.location.reload(true)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PRO</title>
+    <style>#leftDiv{
+        border:1px solid black;
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<p id="info"></p>
+<div id="leftDiv">
+    <input class="loginClass" type="text" id="input1" placeholder="UserName"> <span> </span> <br>
+    <input class="loginClass" type="text" id="input2" placeholder="passWord"><span> </span><br>
+    <input class="loginClass" type="text" id="input3" placeholder="IP-Address"><span> </span><br>
+    <button id="button1">LOGIN</button>
+</div> 
+<!-- <div id="rightDiv">
+    <input type="text" id="input11" placeholder="height"> <span> </span> <br>
+    <input type="text" id="input21" placeholder="width"><span> </span><br>
+    <input type="text" id="input31" placeholder="color"><span> </span><br>
+    <button id="button2">BUILDDivس</button>
+</div> -->
+
+<!-- <div id="mainDiv">
+    mainDiv
+</div>
+<div id="buildDiv">
+    build
+
+</div> -->
+
+<script>
+        // window.addEventListener("load",function(){
+
+        //     document.querySelectorAll("span")[0].innerHTML="your user";
+        //     document.querySelectorAll("span")[1].innerHTML="your pass"
+        //     document.querySelectorAll("span")[2].innerHTML="your ip address";
+
+        // });
+/* 
+    function Person(first, last, age, hair){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.hairColor = hair;
+        this.personInfo = function(){
+            return this.firstName +' '+this.lastName+' '+this.age;
+        }
+    }
+
+    let person1 = new Person('john','don',40,'white');
+    let person2 = new Person('jan','smi',30,'green');
+    let person3 = new Person('tom','faas',60,'blue');
+
+    // console.log(person2.personInfo());
+
+    function employeeObject (name,salary,job){
+        this.name = name;
+        this.salary = salary;
+        this.job = job;
+        this.info = function(){   
+           return 'name;' + this.name +' earn; '+this.salary +' working as; '+this.job;
+        }
+    }
+
+        employee1 = new employeeObject('ahmad',1500,'developer');
+        employee2 = new employeeObject('fadi',1000,'netkorking');
+        employee3 = new employeeObject('ali',1200,'lalara');
+
+        console.log(employee1.info());
+        console.log(employee2.info());
+        console.log(employee3.info());
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+    // let student = {name:'MNara', 
+    //     age:'22', 
+    //     city:'Berlin',
+    //     university:'T U Berlin',
+    //     language:'EN',
+    //     get getLanguage(){   
+    //         return this.language;
+    //     },
+    //     set setLanguage(value){
+    //         return this.language = value;
+    //     }
+    // };
+
+    // console.log(student.getLanguage);
+
+    // student.setLanguage='ham';
+
+    // console.log(student.getLanguage)
+        
+
+    // get lang(){ return this.language;}
+    // set lang (value){this.language = value;}
+
+    // function Student(name,age,city,university,language,usd,changeRate)  {
+
+    //     this.name = name; 
+    //     this.age = age; 
+    //     this.city = city;
+    //     this.university = university;
+    //     this.language = language;
+    //     this.bankAccount = usd;
+    //     this.changeMonye = function(){
+    //         return this.bankAccount * changeRate;
+    //     }
+    //     this.getLanguage = function (/* language */){   
+    //         return this.language = language;
+    //     }      
+    //     this.stdInfo = function(){
+    //     return  this.name+
+    //     ' age '+ this.age+ 
+    //     ' live in: '+ this.city+
+    //     ' student in: '+ this.university +
+    //     ' speak: '+ this.language +
+    //     ' and have: '+ this.changeMonye() + ' Euro' ; 
+    //     }
+    // }
+    // var std1= new Student('lala',15,'Hamburg','University-Hamburg','German',1000,0.8);
+    // console.log(std1.stdInfo());
+
+
+
+
+
+
+class student{
+
+    constructor(name,age,city,university,language,usd,toEuro)  {
+
+        this.name = name; 
+        this.age = age; 
+        this.city = city;
+        this.university = university;
+        this.language = language;
+        this.changeMonye = function(){
+            return usd * toEuro;
+        }
+        this.getLanguage = function (/* language */){   
+            return this.language = language;
+        }      
+        this.stdInfo = function(){
+            return  `${this.name}  is:  ${this.age}; live in: ${this.city}; student in: ${this.university}; speak: + this.language +'; and have: ' + this.changeMonye() + '; Euro.' `; 
+        }
+    }
+
+       hello(){
+        return 'hello '+ this.name;
+    } 
+}
+ 
+
+    // var std1= new student('lala',15,'Hamburg','University-Hamburg','German',0.8,1000);
+    // console.log(std1.stdInfo());
+    // // alert(std1.hello());
+    // document.getElementById('info').innerHTML = std1.stdInfo();
+
+/*     var items = [
+                    [1, 2],
+                    [3, 4],
+                    [5, 6]
+                ];
+    console.log(items[2][1]); // 1
+    console.log(items); */
+
+/* var x = new Array(10);
+
+for (var i = 0; i < x.length; i++) {
+  x[i] = new Array(3);
+}
+
+console.log(x);
+ */
+
+
+
+
+
+
+    class Pet {
+        constructor(petName, petColor){
+            this.petName=petName;
+            this.petColor=petColor;
+        }
+        writeName(){
+            return (`Name is ${this.petName} and Color is ${this.petColor}`);   
+        }
+    }   
+
+    const pet1 = new Pet ('Dog','black');
+
+    class Cat extends Pet {
+        constructor(petName, petColor, age, sound){
+        super(petName, petColor);
+
+            this.age = age;
+            this.sound = sound;
+        }
+        writeAge(){
+            document.write(`and it is ${this.age}`);
+        }
+        sounds(){
+            alert(`${this.sound}`);
+        }
+    }
+
+
+ class Dog extends Pet{
+    constructor(petName, petColor, owner, address){
+        super(petName,petColor);
+    this.owner = owner;
+    this.address = address;
+    }
+
+    hwoIsMyOwner(){
+        document.write('the Owner is: ' + this.owner + '</br>')
+    }
+    whereIm(){
+        document.write('the Address is: ' + this.address)
+    }
+ }
+
+
+let input =  document.querySelectorAll('input');
+let submit = document.getElementById('button1');
+
+let dog = new Dog(/* input[0].value,input[1].value,input[2].value,input[3].value */);
+
+// submit.addEventListener('click',function(){
+//     document.write(dog.whereIm());
+// })
+
+//  const c = new Cat('kaka','broun',2,'meow');
+//  console.log(c);
+
+
+// input[0].value,input[1].value,input[2].value,input[3].value
+
+
+
+class Accounts {
+    constructor(userName, passWord, ip,){
+    this.userName = userName;
+    this.passWord =  passWord;
+    this.ip =  ip;
+    this.startTime = new Date();
+    }
+    getActivityTime(){
+        let start = this.startTime.getTime();
+        let now = new Date();
+        now = now.getTime();
+        document.getElementById('info').innerHTML = (now - start) / 1000;
+    }
+}
+
+class User extends Accounts{
+    constructor(userName, passWord, ip ){
+          super(userName, passWord, ip );
+    }
+    userRegistration(){                                                                                                     // let err=[]/* userError */;        /* let       passError */;        /* let       ipError */;        // if(this.userName !== 'user'){        //     err[0]/* userError */="wrong user name ";        //     document.querySelectorAll("span")[0].innerHTML=err[0]/* userError */;                    // }        // if(this.passWord !== '12345'){        //     err[1]/* passError */="wrong password";        //     document.querySelectorAll("span")[1].innerHTML=err[1]/* passError */;        // }        // if(this.ip !== '127.1.1.1'){        //     err[2]/* ipError */="your ip is wrong";        //     document.querySelectorAll("span")[2].innerHTML=err[2]/* ipError */;        // }
+        if(this.userName == 'user' && this.passWord == '12345' && this.ip == '127.1.1.1'){
+
+            alert('Welcome User');
+            this.getActivityTime();
+        }
+        else{
+
+            alert('You can not access');
+
+        }
+    }
+}
+
+class Admin extends Accounts{
+    constructor(userName, passWord, ip, add, remove, edit, activityTime){
+          super(userName, passWord, ip );
+
+    this.add = add;
+    this.remove = remove;
+    this.edit = edit;
+    this.activityTime = activityTime;
+    }
+    adminRegistration(){ 
+        if(this.userName == 'admin' && this.passWord == '12345' && this.ip == '127.1.1.2'){
+            alert('Welcome Admin');
+            this.getActivityTime();
+
+        }else{
+            alert('You can not access');
+
+        } 
+    }
+    add_function(){
+        this.add;
+    }    
+    remove_function(){
+        this.remove;
+        
+    }    
+    edit_function(){
+        this.edit;
+        
+    }
+
+}
+let user =  new User (input[0].value,input[1].value,input[2].value);
+let admin = new Admin(input[0].value,input[1].value,input[2].value);
+submit.addEventListener('click',function(){
+if(input[0].value == 'user'){
+    user.userRegistration();
+}else if(input[0].value == 'admin'){
+    admin.adminRegistration();
+}else{
+    alert('You dont have Account');
+} 
+})
+
+
+// class Rectangle{
+//     constructor(height, width, color,marginleft, marginright){
+//         this.height = height;
+//         this.width = width;
+//         this.color = color;
+//         this.marginleft = marginleft;
+//         this.marginright = marginright;
+//         console.log(arguments[length]);
+
+//     };
+
+//     create(){
+//         let newElemtnt = document.createElement('p');
+//         let rectangle = document.getElementById('rectangle').appendChild(newElemtnt)  ;
+//         newElemtnt.style.height = this.height+"px" ;
+//         newElemtnt.style.width =this.width+"px";
+
+//         newElemtnt.style.marginLeft=this.marginleft;
+//         newElemtnt.style.marginRight=this.marginright;
+
+//         newElemtnt.style.background=this.color;
+//         // newElemtnt.style.position = 'relative';
+
+//         }   
+//     create2(){
+//         let newElemtnt = document.createElement('p');
+//         let rectangle = document.getElementById('rectangle').appendChild(newElemtnt)  ;
+//         newElemtnt.style.height = this.height+"px" ;
+//         newElemtnt.style.width =this.width+"px";
+
+//         newElemtnt.style.marginLeft=this.marginleft;
+//         newElemtnt.style.marginRight=this.marginright;
+
+//         newElemtnt.style.background=hexaRandom();
+//         newElemtnt.style.float = 'right';
+//         // newElemtnt.style.position = 'relative';
+//         }
+
+// }
+
+let hexa = '0123456789ABCDEF';
+function hexaRandom(){
+    let hexaColor = "#"
+    for (i = 0; i < 6; i++){
+        // let index = Math.floor(Math.random() * hexa.length);
+        let hexaRandom = Math.floor(Math.random() * 16);
+        hexaColor += hexa[hexaRandom];
+        // hexaColor += hexa[index];
+        //console.log(color);      
+        }
+      //   console.log(color);
+        return hexaColor;
+}
+
+
+// for (let i = 0; i <= 100; i++){
+
+//     let div1 = new Rectangle(Math.random()* 50, Math.random(100)* 1000,hexaRandom(),
+//     Math.random() * 200, Math.random() * 200 ) ; 
+//     div1.create();
+//     div1.create2();
+// }
+
+
+// let button2 = document.getElementById('button2');
+
+// class Rectangle{
+//     constructor(/* height, width, color */){
+//         this.height /* = height */;
+//         this.width /* = width  */ ;
+//         this.color/*  = color  */;
+//         this.newDiv = document.createElement('div');
+//     };
+//     create(){
+//          let mainDiv = document.getElementById('mainDiv');
+//         mainDiv.appendChild(this.newDiv);
+//         this.newDiv.style.height =/* this. height */50 + 'px';
+//         this.newDiv.style.width =/*  this. width */ 50+ 'px';
+//          this.newDiv.style.color =this.color;
+//         this.newDiv.style.background = hexaRandom();
+//         this.newDiv.style.cssFloat = 'left';
+        
+//     }
+    
+// }
+button2.addEventListener('click',function(){
+
+ /*    let height = document.getElementById('input11').value;
+    let width = document.getElementById('input21').value;
+    let color = document.getElementById('input31').value; */
+    // let radius = document.getElementById('input41').value;
+
+    let recht = new Rectangle(/* height,width,color */);
+    recht.create();
+
+    
+})
+
+
+
+
+    </script>
+    
+</body>
+</html>

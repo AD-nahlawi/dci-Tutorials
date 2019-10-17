@@ -1,0 +1,153 @@
+body{
+
+    background-color:beige;
+
+}
+
+/* 
+div > ul > li{
+    border: 1px solid black;
+    float: left; 
+    border: 1px solid black;
+    background-color:lightgrey;
+    padding: 1rem; 
+    list-style: none;
+}
+.content{
+    position: absolute;
+    margin-top: 4rem;
+
+}
+
+.home_class:hover .content:hover{
+
+}
+ */
+
+
+
+
+h1{
+
+    border: 1px solid black;
+
+    color: red;
+}
+/* --------------------------------text------------------------------------ */
+
+
+.text::before{
+
+    content: 'Start_paragraphh';
+    color: red;
+    font-weight: 800;
+    display: block;
+    background-color: darkblue;
+    width: 100%;
+    border: 3px solid red;
+
+}
+.text{
+
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 1.5em
+}
+.text::after{
+
+    content: 'End_paragraphh';
+    color: red;
+    font-weight: 800;
+    display: block;
+    background-color: darkblue;
+    width: 75%;
+    border: 2px solid red;
+
+}
+/* --------------------------------h2------------------------------------ */
+
+
+h2::before{
+
+    content: open-quote;
+    /* color: red;
+    font-weight: 800;
+    background-color: darkblue;
+    width: 50%;
+    border: 3px solid red; */
+
+}
+h2{
+
+    border: 1px solid black;
+    padding: 20px;
+
+}
+h2::after{
+
+    content: close-quote;
+    /* color: red;
+    font-weight: 800;
+    background-color: darkblue;
+    width: 25%;
+    border: 2px solid red; */
+    
+}
+
+/* ----------------------article-------------------------------------------------- */
+.article{
+    border: 2px solid black;
+    padding: 30px;
+    font-size: 1.5em;
+}
+.article a::before{
+    content: attr(info);
+    background-color: gray;
+    color: white;
+    position: absolute;
+    bottom: 49%;
+    left: 40px;
+    border-radius: 10px;
+    /* opacity: 0.6; */
+    transform: scale(0);
+}
+.article a:hover::before{
+    transform: scale(1);
+    transition: ease-in-out 300ms;
+}
+.center{
+text-align: center;
+border: 1px solid black;
+}
+
+
+.btn_hover{
+    position: relative;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.4em;
+}
+
+.btn_hover::after{
+    width: 100px;
+    position: absolute;
+    content: 'HI!';
+    color: white;
+    border: 1px solid black;
+    left: 55px;
+    bottom: 110%;
+    transform: scale(0);
+    transition: 500ms;
+}
+
+
+.btn_hover:hover::after{
+    transform: scale(1);
+    background-color: brown;
+    border-radius: 50%;
+
+
+}
+
+
+

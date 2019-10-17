@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promise</title>
+</head>
+<body>
+<script>
+//     var delay = 5000;
+// Promise
+// var delayPromise = new Promise(
+//     function(resolve, reject){
+
+//         if (delay < 5000){
+//             var less = "less than 1000";
+//             setInterval(function(){
+//                 resolve(less);
+//             },delay);
+//         }
+//         else{
+//             var out = new Error('time out');
+//             setInterval(function(){
+//                 reject(out);
+//             },delay);
+//         }
+//     }
+// );
+// //call our promise
+// var checkTime = function(){
+//     delayPromise
+//     .then(function(tRue){
+
+//         console.log(tRue);
+//     })
+//     .catch(function(fAlse){
+//         console.error(fAlse.message);
+//     })
+// }
+// checkTime();
+
+var myDelay = 3000;
+var willGetDBResphone = new Promise(
+
+    function(tRue, fAlse){
+        if(myDelay <= 3000){
+            var res = { uName:'ahmad', idNum:'123456798' };
+
+            setInterval(function(){
+                tRue(res);
+            },3000)
+        }
+        else{
+            var rej = Error('it took too long');
+            setInterval(function(){
+                fAlse(rej);
+            },3000)
+        }
+    }
+
+);
+var sendRequest = function(){
+    willGetDBResphone
+    .then(function(tRue){
+
+        console.log(tRue);
+    })
+    .catch(function(fAlse){
+        console.error(fAlse.message);
+    })
+}
+
+setInterval(function(){
+    console.log('hi');
+},500);
+
+
+</script>
+    
+</body>
+</html>

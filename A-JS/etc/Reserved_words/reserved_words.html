@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+Reserved words of the JavaScript langauge are listed below.
+(Some of these words are actually used in the Java language,
+and are reserved in JavaScript for compatibility purposes
+or as possible extensions.)
+<b><i>When choosing names for your JavaScript variables,
+avoid these reseved words!</i></b>
+
+<p>
+<p>
+<script language="JavaScript"> 
+
+function printTable (tableCells,tableWidth) {
+ var tableRows=Math.ceil(tableCells.length/tableWidth);
+ var tableBuf='<table border=0 cellspacing=2 cellpadding=2>\n';
+ for (var K=0;K<tableRows;K++) {
+  tableBuf+='<tr>';
+  for (var L=0;L<tableWidth;L++) {
+   var M=K+L*tableRows;
+   tableBuf+='<td>'+((M<tableCells.length)?(tableCells[M]):'')+'&nbsp;&nbsp;</td>';
+  }
+  tableBuf+='</tr>\n';
+ }
+ document.writeln(tableBuf+'</table>');
+}
+
+
+tableCells1=new Array(
+ 'abstract'
+,'boolean'
+,'break'
+,'byte'
+,'case'
+,'catch'
+,'char'
+,'class'
+,'const'
+,'continue'
+,'debugger'
+,'default'
+,'delete'
+,'do'
+,'double'
+,'else'
+,'enum'
+,'export'
+,'extends'
+,'false'
+,'final'
+,'finally'
+,'float'
+,'for'
+,'function'
+,'goto'
+,'if'
+,'implements'
+,'import'
+,'in'
+,'instanceof'
+,'int'
+,'interface'
+,'let'
+,'long'
+,'native'
+,'new'
+,'null'
+,'package'
+,'private'
+,'protected'
+,'public'
+,'return'
+,'short'
+,'static'
+,'super'
+,'switch'
+,'synchronized'
+,'this'
+,'throw'
+,'throws'
+,'transient'
+,'true'
+,'try'
+,'typeof'
+,'var'
+,'void'
+,'volatile'
+,'while'
+,'with'
+); 
+    
+printTable(tableCells1,4);
+//-->
+</script>
+
+<p>
+In addition to the above reserved words, you'd better avoid
+the following identifiers as names of JavaScript variables.
+These are predefined names of implementation-dependent JavaScript objects, 
+methods, or properties (and, arguably, some <i>should have been</i> reserved words):  
+
+<p>
+<script language="JavaScript">
+
+tableCells2=new Array( 
+ 'alert'
+,'all'
+,'anchor'
+,'anchors'
+,'area'
+,'Array'
+,'assign'
+,'blur'
+,'button'
+,'checkbox'
+,'clearInterval'
+,'clearTimeout'
+,'clientInformation'
+,'close'
+,'closed'
+,'confirm'
+,'constructor'
+,'crypto'
+,'Date'
+,'decodeURI'
+,'decodeURIComponent'
+,'defaultStatus'
+,'document'
+,'element'
+,'elements'
+,'embed'
+,'embeds'
+,'encodeURI'
+,'encodeURIComponent'
+,'escape'
+,'eval'
+,'event'
+,'fileUpload'
+,'focus'
+,'form'
+,'forms'
+,'frame'
+,'frames'
+,'frameRate'
+,'function'
+,'getClass'
+,'hasOwnProperty'
+,'hidden'
+,'history'
+,'image'
+,'images'
+,'Infinity'
+,'isFinite'
+,'isNaN'
+,'isPrototypeOf'
+,'java'
+,'JavaArray'
+,'JavaClass'
+,'JavaObject'
+,'JavaPackage'
+,'innerHeight'
+,'innerWidth'
+,'layer'
+,'layers'
+,'length'
+,'link'
+,'location'
+,'Math'
+,'mimeTypes'
+,'name'
+,'NaN'
+,'navigate'
+,'navigator'
+//,'netscape'
+,'Number'
+,'Object'
+,'offscreenBuffering'
+,'open'
+,'opener'
+,'option'
+,'outerHeight'
+,'outerWidth'
+,'packages'
+,'pageXOffset'
+,'pageYOffset'
+,'parent'
+,'parseFloat'
+,'parseInt'
+,'password'
+,'pkcs11'
+,'plugin'
+,'prompt'
+,'propertyIsEnum'
+,'prototype'
+,'radio'
+,'reset'
+,'screenX'
+,'screenY'
+,'scroll'
+,'secure'
+,'select'
+,'self'
+,'setInterval'
+,'setTimeout'
+,'status'
+,'String'
+,'submit'
+//,'sun'
+,'taint'
+,'text'
+,'textarea'
+,'top'
+//,'toFixed'
+//,'toExponential'
+//,'toPrecision'
+,'toString'
+,'undefined'
+,'unescape'
+,'untaint'
+,'valueOf'
+,'window'
+)
+printTable(tableCells2,3);
+//-->
+</script>
+
+
+<p>
+Similarly, the following names (depending on your target browser) 
+may have special meanings as <i>event handlers</i>, and therefore should not be used for any other purpose:
+				
+<p>
+<script language="JavaScript">
+
+tableCells3=new Array( 
+ 'onbeforeunload'
+,'onblur'
+,'ondragdrop'
+,'onclick'
+,'oncontextmenu'
+,'ondragdrop'
+,'onerror'
+,'onfocus'
+,'onkeydown'
+,'onkeypress'
+,'onkeyup'
+,'onload'
+,'onmousedown'
+,'onmousemove'
+,'onmouseout'
+,'onmouseover'
+,'onmouseup'
+,'onreset'
+,'onsubmit'
+,'onunload'
+)
+printTable(tableCells3,4);
+//-->
+</script>
+
+</td>
+
+<td valign=top>
+<p>&nbsp;<br>
+
+<script type="text/javascript">
+/*google_ad_client = "ca-pub-5507865760857847";*/
+/* 160x600_20110328   ??????????????????*/ 
+
+
+/*google_ad_slot = "2729105170";
+google_ad_width = 160;
+google_ad_height = 600;*/
+
+//-->
+</script>
+<!-- <script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> -->
+
+<p>
+
+<script type="text/javascript">
+// google_ad_client = "ca-pub-5507865760857847";
+/* 160x600_20110328 */
+// google_ad_slot = "2729105170";
+// google_ad_width = 160;
+// google_ad_height = 600;
+
+</script>
+<!-- <script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> -->
+
+</td>
+</tr>
+</table>
+</body>
+</html>

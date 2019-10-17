@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+class Person{
+    constructor(firstName,lastName,birthday, address){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = birthday;
+        this.address= address;
+    }
+    // greeting(){
+    //     alert('Hello'+ this.firstName + ' ' +this.lastName);
+    // }
+    // getBirthday(){
+    //     // let today = ' '; // 18.10.2015
+    //     // if (today = this.birthday){
+    //     //     alert('Happy Birthday! ' + this.firstName);
+    //     }
+    // }
+}
+// Thu Jul 18 2019
+class Student extends Person{
+    constructor(firstName,lastName,birthday, address, id, university){
+          super(firstName,lastName,birthday, address);
+    this.id = id;
+    this.university = university;
+    }
+    getbBirth(){
+        let today = new Date();
+        let day = today.getDate();
+        // console.log(day);
+        let month = today.getMonth();
+        // console.log(month);
+
+        let personDate = new Date(this.birthday);
+        let currMonth=personDate.getMonth()+1;
+        console.log('the day of birth is : ' + personDate.getDate());
+        console.log('the month of birth is : ' + currMonth );
+
+
+        if (day == personDate.getDate() && month == personDate.getMonth() ){
+            alert('your birth day');
+        }else{
+            alert('not your birth day');
+        }
+       
+    }
+} 
+
+
+var student = new Student('Ahmad','Nah',"1995-07-18","add",456, 'fds');
+student.getbBirth();
+
+
+
+
+
+
+</script>
+</body>
+</html>

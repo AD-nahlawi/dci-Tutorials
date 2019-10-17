@@ -1,0 +1,224 @@
+.text_section1 p {
+  background: -webkit-gradient(linear, right top, left top, from(red), color-stop(green), to(blue));
+  background: linear-gradient(to left, red, green, blue);
+  border: 1px solid black;
+  background: -webkit-gradient(linear, , );
+  background: linear-gradient(to);
+  color: cadetblue;
+  text-align: center;
+}
+
+body {
+  font-family: "Akronim", cursive;
+  font-size: 35px;
+}
+
+header {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+}
+
+header h1 {
+  color: #ff6666;
+  text-transform: uppercase;
+}
+
+header h2 {
+  color: #3333ff;
+  text-transform: uppercase;
+}
+
+.nav {
+  text-align: center;
+  background-color: #555555;
+}
+
+.nav .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav .nav-ul li {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.nav .nav-ul li a {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  color: wheat;
+  text-decoration: none;
+  padding: 15px;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+}
+
+.nav .nav-ul li a:hover {
+  background-color: wheat;
+  border: 1px solid black;
+  color: black;
+}
+
+.nav .nav-ul li a:active {
+  background-color: indianred;
+}
+
+.text_section1 .h3_animation1 {
+  -webkit-animation-name: my_ani;
+          animation-name: my_ani;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes my_ani {
+  from {
+    color: red;
+  }
+  to {
+    color: green;
+    margin-left: 10%;
+  }
+}
+
+@keyframes my_ani {
+  from {
+    color: red;
+  }
+  to {
+    color: green;
+    margin-left: 10%;
+  }
+}
+
+.text_section1 p {
+  text-align: center;
+}
+
+#text2 .h3_animation2 {
+  -webkit-animation-name: my_ani;
+          animation-name: my_ani;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes my_ani {
+  from {
+    color: red;
+  }
+  to {
+    color: orange;
+    margin-left: 50%;
+  }
+}
+
+#text2 p {
+  text-align: center;
+}
+
+.image_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image_section img {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  height: 250px;
+  margin: 10px 5px 10px 5px;
+}
+
+footer {
+  height: 150px;
+  background: #555555;
+}
+
+footer .footer-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 20px;
+}
+
+footer .footer-ul a {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  padding: 10px;
+  text-decoration: none;
+  color: wheat;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+}
+
+footer .footer-ul a:hover {
+  background-color: wheat;
+  border: 1px solid black;
+  color: black;
+}
+
+footer .footer-ul a:active {
+  background-color: indianred;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-ul li {
+    text-align: center;
+  }
+  .image_section2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-ul {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=mixins.css.map */

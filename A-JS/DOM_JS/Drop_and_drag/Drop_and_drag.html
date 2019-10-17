@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+    .destination {
+        float: left;
+        margin: 10px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid lightpink
+    }
+    #main {
+        font-size: 30px;
+    }
+    .dragdrop {
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin: 10px;
+        border: 1px solid lightcoral;
+    }
+    </style>
+    <title>Document</title>
+  </head>
+
+  <body>
+
+
+
+
+<!-- 
+
+    <div class="destination">
+        <div draggable="true" id="main">Drag and Drop in Js</div>
+    </div>
+
+    <div class="destination"></div>
+    <div class="destination"></div>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="dragdrop" 
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)">
+            <img src="/IMGs/C-images/8.jpeg"draggable="true"ondragstart="drag(event)"id="drag1"width="200"height="200"/>
+    </div>
+
+    
+    <div class="dragdrop" 
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)">
+        <!--  -->
+    </div>
+    
+    <div class="dragdrop" 
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)">
+        <!--  -->
+    </div>
+    
+    <div class="dragdrop" 
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)">
+        <!--  -->
+    </div>
+
+
+
+    <script src="Drop_and_drag.js"></script>
+  </body>
+</html>

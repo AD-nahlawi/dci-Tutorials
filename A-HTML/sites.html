@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <link rel="stylesheet" href="/B-style/sites.css">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Flex</title>
+
+        </head>
+    <body>
+    <!-- ---------------------   header  ------------------------ -->
+        <div class="header">
+            <h2>My Website with Flex</h2>
+            <p>a responsive Website</p>
+        </div>
+    <!-- ---------------------    nav    ---------------------------- -->
+
+        <div class="nav">
+            <a href="gallery.html">Gallerys</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Picture</a>
+        </div>
+    <!-- ---------------------    side   ------------------------------------ -->
+    <script>
+    function show_hide(){
+        // alert(document.getElementById(''))
+        if( document.getElementsByClassName('side')[0].style.display=='block' ){
+
+            document.getElementsByClassName('side')[0].style.display='none';
+        }else{
+            document.getElementsByClassName('side')[0].style.display='block';
+        }
+        // var elem = document.getElementById(id);
+        // elem.style.display = (elem.style.display == 'block') ? 'none' : 'block';
+        // elem.style.transition = "2s";
+    }
+
+    </script>
+    <div class="row">
+
+    
+    
+
+    <div style="height:100%;width:33px;">
+        <button onclick="show_hide()">M</button>
+    </div>
+
+
+
+    <div class="side">
+
+        <div>
+                <h2>SIDE_DIV</h2>
+
+                <h4>photo of us</h4>
+    
+                <div class="noimg" style="height:100px;">Image div class="noimg"</div>
+    
+                <p>
+                        Welcome to Flexbox Froggy, a game where you help Froggy and friends by writing CSS code! Guide this frog to the lilypad on the right by using the justify-content property, which aligns items horizontally and accepts the following values:
+                </p>
+    
+                <h3>More Content</h3>
+    
+                <p>
+                        Welcome to Flexbox Froggy, a game where you help Froggy and friends by writing CSS code! Guide this frog to the lilypad on the right by using the justify-content property, which aligns items horizontally and accepts the following values:
+                </p>
+    
+                <div class="noimg" style="height:50px;">Image div class="noimg"</div>
+                <div class="noimg" style="height:50px;">Image div class="noimg"</div>
+        </div>
+    </div>
+
+    <!-- ---------------------    main   ------------------------------------ -->
+
+                
+        <div class="main">
+            
+            <h2>MAIN_DIV</h2>
+            <h5>09.04.19</h5>
+            <div class="noimg" style="height:50px;">Image div class="noimg"</div>
+            <p>Some paragraph</p>
+            <p>
+                    Welcome to Flexbox Froggy, a game where you help Froggy and friends by writing CSS code! Guide this frog to the lilypad on the right by using the justify-content property, which aligns items horizontally and accepts the following values:
+            </p>
+
+            <br>
+
+            <h2>div class="main"</h2>
+            <h5>09.04.19</h5>
+            <div class="noimg" style="height:50px;">Image div class="noimg"</div>
+            <div class="noimg" style="height:50px;">Image div class="noimg"</div>
+
+            <p>Some paragraph</p>
+            <p>
+                    Welcome to Flexbox Froggy, a game where you help Froggy and friends by writing CSS code! Guide this frog to the lilypad on the right by using the justify-content property, which aligns items horizontally and accepts the following values:
+            </p>
+            <br>
+        </div>
+
+    </div>
+
+    <!-- ---------------------    footer   ----------------------------------- -->
+
+
+    <div class="footer">
+        <h2>footer</h2>
+    </div>
+
+
+
+        
+    </body>
+    </html>

@@ -1,0 +1,98 @@
+.ball-1 {
+  margin-left: 20%;
+  background-color: darkblue;
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-name: my-animation;
+          animation-name: my-animation;
+}
+
+@-webkit-keyframes my-animation {
+  from {
+    background-color: darkcyan;
+  }
+  to {
+    background-color: blue;
+    margin-left: 800px;
+    margin-bottom: 150px;
+    width: 600px;
+  }
+}
+
+@keyframes my-animation {
+  from {
+    background-color: darkcyan;
+  }
+  to {
+    background-color: blue;
+    margin-left: 800px;
+    margin-bottom: 150px;
+    width: 600px;
+  }
+}
+
+.ball-2 {
+  background-color: blue;
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-name: my-animation;
+          animation-name: my-animation;
+}
+
+@keyframes my-animation {
+  from {
+    background-color: darkcyan;
+  }
+  to {
+    background-color: blue;
+    margin-left: 800px;
+    margin-bottom: 150px;
+    width: 600px;
+  }
+}
+
+.ball-3 {
+  margin-left: 30%;
+  background-color: lightblue;
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-name: my-animation;
+          animation-name: my-animation;
+}
+
+@keyframes my-animation {
+  from {
+    background-color: darkcyan;
+  }
+  to {
+    background-color: blue;
+    margin-left: 800px;
+    margin-bottom: 150px;
+    width: 600px;
+  }
+}
+/*# sourceMappingURL=style2.css.map */

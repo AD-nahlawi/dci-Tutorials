@@ -1,0 +1,163 @@
+/*# sourceMappingURL=style.css.map */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* --------------------------------html, body---------------------------------------*/
+html, body {
+  font-size: 30px;
+  font-family: "Akronim", cursive;
+  background: -moz-linear-gradient(left, #474747 0%, rgba(71, 71, 71, 0.92) 27%, rgba(102, 102, 102, 0.92) 28%, rgba(77, 77, 77, 0.92) 28%, rgba(89, 89, 89, 0.91) 29%, rgba(171, 90, 3, 0.85) 50%, rgba(0, 0, 0, 0.85) 51%, rgba(43, 43, 43, 0.85) 51%, rgba(171, 90, 3, 0.84) 52%, rgba(18, 18, 18, 0.77) 77%, rgba(43, 43, 43, 0.77) 78%, rgba(43, 43, 43, 0.77) 78%, rgba(28, 28, 28, 0.73) 91%, rgba(18, 18, 18, 0.7) 100%);
+}
+
+/* --------------------------------header---------------------------------------*/
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  font-size: 20px !important;
+  text-align: center;
+  border: 1px solid black;
+  /* display: inline-block; */
+}
+
+/* --------------------------------navigation---------------------------------------*/
+nav ul {
+  text-align: center;
+  text-decoration: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  -webkit-transition: ease-in-out 600ms;
+  transition: ease-in-out 600ms;
+}
+nav ul li a:hover {
+  background-color: chocolate;
+  margin: 50px;
+  color: goldenrod;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* --------------------------------cards---------------------------------------*/
+.cards {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+.cards .card {
+  padding: 20px;
+  margin: 10px;
+  -webkit-box-shadow: 5px 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px 5px gray;
+  border-radius: 30px;
+  -webkit-transition: ease-in-out 600ms;
+  transition: ease-in-out 600ms;
+}
+.cards .card .card:hover {
+  color: goldenrod;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* --------------------------------portion, img---------------------------------------*/
+.portion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+}
+.portion img {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+/* --------------------------------aside, section---------------------------------------*/
+aside, section {
+  border: 1px solid black;
+  padding: 0px 0px 0px 40px;
+}
+
+/* --------------------------------footer---------------------------------------*/
+footer ul {
+  border: 1px solid red;
+  text-align: center;
+  text-decoration: none;
+}
+footer ul li {
+  border: 1px solid black;
+  display: inline-block;
+}
+footer ul li a {
+  text-align: center;
+  padding: 16px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: red;
+}
+
+/* --------------------------------grids---------------------------------------*/
+.item {
+  background-color: brown;
+  color: white;
+  border: 2px solid black;
+  padding: 20px;
+  text-align: center;
+  /* height: 200px; */
+}
+
+.header {
+  grid-area: el_header;
+}
+
+.left {
+  grid-area: el_left;
+}
+
+.center {
+  grid-area: el_center;
+}
+
+.right {
+  grid-area: el_right;
+}
+
+.footer {
+  grid-area: el_footer;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "el_header el_header el_header" "el_left el_center el_right" "el_footer el_footer el_footer";
+}
+
+@media all and (max-width: 700px) {
+  .grid {
+    grid-template-areas: "el_left el_header el_right " "el_center el_center el_center" "el_left el_footer el_right";
+  }
+}
+@media all and (max-width: 400px) {
+  .grid {
+    grid-template-areas: "el_header" "el_left " "el_right" "el_center" "el_footer";
+  }
+}  
+/* -----------------------------------------------------------------------*/
+a{color: gold;}
+/*# sourceMappingURL=pageStyle.css.map */

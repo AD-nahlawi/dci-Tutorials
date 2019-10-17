@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;    
+        }
+    
+        li:hover{
+            background: rgb(85, 126, 143);
+        
+        }
+        a li{
+            border: 1px solid black;
+            padding: 5px;
+            list-style-type:none;
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        div{float: left; width: 50%; padding: 10px;}
+        .formClass{float: left;width: 50%;padding: 10px;border: 1px solid black;}
+
+    </style> 
+</head>
+<body>
+
+    <h3>
+        <a href="https://www.w3schools.com/js/js_events_examples.asp">w3schools js_events_examples.asp</a>
+    </h3>
+
+    <!-- <button onclick="changeBg()">red</button> -->
+    <!-- <button onclick="changeBg()">blue</button> -->
+
+
+
+
+
+    <!-- <div id="logo">
+            <img  onclick="chImg()" id="logoImg" src="https://picsum.photos/id/666/300/300" alt="">
+            <button onclick="setInterval( chImg ,1000)">change automatic</button>
+    </div> -->
+    <a href="eventListner/eventListner.html"><li>eventListner.html</li></a><br><br>
+
+
+<div>
+    <a href=""><li>Onclick</li></a>
+    <a href=""><li>Onblur</li></a>
+    <a href=""><li>Onclick</li></a>
+    <a href=""><li>Onmouseover</li></a>
+    <a href=""><li>Onfocus</li></a>
+    <a href=""><li>Onchange</li></a>
+    <a href=""><li>Onkeydown</li></a>
+    <a href=""><li>Onkeyup</li></a>
+    <a href=""><li>Onkeypress</li></a>
+</div>
+
+<br>
+
+
+
+
+    <form class="formClass" action="">
+
+        <label for="">onfocus___</label>
+        <input type="text" name="A" onfocus="onFocusFunction()"><br>
+
+        <label for="">onblur____</label>
+        <input type="text" name="B" onblur="onBlurFunction()"><br>
+
+        <label for="">onchange_</label>
+        <input type="text" name="C" onchange="onChangeFunction()"><br>
+
+        <label for="">onselect__</label>
+        <input type="text" name="D" onselect="onSelectFunction()"><br>
+<!-- ----------------------------------onkey-------------------------------------- -->
+        <label for="">onkeypress</label>
+        <input type="text" name="E" onkeypress="onKeyPressFunction()"><br>
+
+        <label for="">onkeyup___</label>
+        <input type="text" name="F" onkeyup="onKeyUpFunction()"><br>
+
+        <label for="">onkeydown</label>
+        <input type="text" name="G" onkeydown="onKeyDownFunction()"><br>
+        <input type="submit">
+
+    </form>
+
+
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+
+        <form onsubmit="onSubmitFunction()" action="https://www.w3schools.com/" method="GET">
+
+            <label for="email" >enter Your  Email</label>
+            <input name="myEmail"type="text"><br>
+
+            <label for="email">enter Your Password</label>
+            <input name="myPassword"type="password"><br>
+
+            <input type="submit" >
+
+        </form>
+
+
+
+        <br><script src="events.js"></script>        
+</body>
+</html>
+
+
+
+
+
+

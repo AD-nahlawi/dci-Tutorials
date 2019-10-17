@@ -1,0 +1,269 @@
+
+    @media   screen and (max-width:900px){
+        nav , aside, article,#footerdiv1,  #footerdiv2,  #footerdiv3, header, #h1,#logo, footer,ul, li ,.b,.class_img{
+             display: block;
+             width: 100% auto;
+            position: relative;
+        }
+
+        nav{
+             position: relative;
+             text-align: center;
+             bottom: 0px;
+             right: 0px;
+        }
+        img, .class_img{background-position: center center;}
+    }
+
+   
+
+*
+    { box-sizing: border-box;}
+
+
+
+    a{
+         color: black;
+         padding: 14px;
+         text-decoration: none;
+         display: inline-block;
+        }
+
+
+    a:hover{
+         border: 1px solid black;
+         background-color: rgb(219, 77, 30);
+         border-radius: 10px;
+        }
+
+
+
+    header{
+         position: relative; 
+         width: 100%;
+         border:1px solid black;
+         background-color: rgb(143, 116, 116);
+         }
+
+
+
+    header #h1,#logo{
+         display: inline-block;
+         margin-bottom: 0px;
+    }
+
+
+    nav{
+         position:absolute;
+         /* width: auto; */
+         text-align:center;
+         background-color:grey;
+         bottom:1px;
+         right:25px;
+         border-radius:10px;
+         display: block;
+    }
+
+    
+
+    article{
+         border:1px solid black;
+         box-sizing:border-box;
+         width:66.8%;
+         float:left;
+         text-align:justify;
+         background-color:rgb(187, 69, 0) ;
+        }
+
+
+
+    p{
+         text-align:center;
+         font-size:25px;
+    }
+
+
+
+    aside{
+         border:1px solid black;
+         background-color:rgb(148, 95, 95);
+         float:right;
+         width:31%;
+         overflow:hidden;
+         text-align:center;
+        }
+
+
+
+    footer{
+        
+        
+         background-color:rgb(143, 116, 116);
+         width:100%;
+         display:inline-block;
+        }
+
+        #footerdiv1,  #footerdiv2,  #footerdiv3{
+            /* display: inline-block; */
+            /* vertical-align: top; */
+            width: 33.3%;
+            float: left;
+            text-align: center
+
+        }
+
+
+
+    #footerdiv1{
+
+        /* border: 1px solid black; */
+        /* height: 20% */
+        }
+
+
+
+    #footerdiv2{
+        
+        /* border: 1px solid black; */
+        /* height: 20% */
+
+        }
+
+
+
+
+    #footerdiv3{
+        /* height: 20%; */
+
+        /* border: 1px solid black; */
+
+         }
+
+
+
+
+
+
+.class_img{height: 60px;width: 60px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <style>
+        @media  screen and (max-width:700px){header,div,h1,h2,nav,a,article, p,aside,footer{width:100%;}}
+
+        *{box-sizing: border-box;}
+        a{ color: black;padding: 16px;text-decoration: none;display: inline-block;}
+        a:hover{border: 1px solid black; background-color: rgb(219, 77, 30);border-radius: 10px;}
+        
+    </style>
+</head>
+<body>
+
+        <!-- bottom:0px;right: 0px; -->
+        <!-- <header style="background-color: burlywood;text-align: right;"> -->
+
+
+
+<header style  ="position: relative; width: 100%; height:200px; border:1px solid black;background-color: rgb(143, 116, 116); ">
+    <div id="main_title">
+        <style>header h1,#logo{display: inline-block;margin-bottom: 0px;}</style>
+        <img src="img_forms/zozor_logo.png" alt="logo"id="logo">
+        <h1 >zozor_logo</h1>
+        <h2>Travel disriese</h2>
+    </div>
+    <nav style ="position:absolute;width:28%;text-align:center;background-color:grey;bottom:10px;right:25px;border-radius:10px; ">
+        <a href="">HOME</a>
+        <a href="">BLOG</a>
+        <a href="">RESUME</a>
+        <a href="">CONTACT</a>
+</nav>
+
+</header>
+        <img src="/img_forms/banner_image.jpg" alt="" width="100%" height="200px" style="border:2px solid black;">
+
+
+
+
+    <article style=" border:1px solid black;height:800px;box-sizing: border-box; width:67.8%;float:left; text-align: justify;background-color: rgb(187, 69, 0)"  >
+        <h1 style="text-align: center;">Computing Quantum</h1>
+        <p style="text-align: center;font-size: 25px" >        
+                Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.[1]:I-5
+
+                The field of quantum computing is actually a sub-field of quantum information science, which includes quantum cryptography and quantum communication. Quantum Computing was started in the early 1980s when Richard Feynman and Yuri Manin expressed the idea that a quantum computer had the potential to simulate things that a classical computer could not.[2][3] In 1994, Peter Shor shocked the world with an algorithm that had the potential to decrypt all secured communications.[4]
+                
+                There are two main approaches to physically implementing a quantum computer currently, analog and digital. Analog approaches are further divided into quantum simulation, quantum annealing, and adiabatic quantum computation. Digital quantum computers use quantum logic gates to do computation. Both approaches use quantum bits or qubits.[1]:2-13
+                
+                Qubits are fundamental to quantum computing and are somewhat analogous to bits in a classical computer. Qubits can be in a 1 or 0 quantum state. But they can also be in a superposition of the 1 and 0 states. However, when qubits are measured they always give a 0 or a 1 based on the quantum state they were in.
+                
+                Today's physical quantum computers are very noisy and quantum error correction is a burgeoning field of research. Quantum supremacy is hopefully the next milestone that quantum computing will achieve soon. While there is much hope, money, and research in the field of quantum computing, as of March 2019 there have been no commercially useful algorithms published for today's noisy quantum computers.  
+        </article>
+
+
+
+
+    <aside style=" border:1px solid black;background-color: rgb(148, 95, 95);float:right; height: 800px; width: 32%;overflow: hidden;text-align: center;">
+            <h1>Quantum Computer</h1>
+        <img src="/img_forms/Untitled.jpg" width="65%" height="35%" style="border:3px solid rgb(187, 69, 0);">
+
+        <p style="text-align: center;font-size: 21px">
+                Growing ComplexityControlling superconducting qubits requires complexpulsed microwave signals on multiple channels withprecisesynchronization. Asthenumberofqubitsandchannels increases, there is a need for more inte-grated,standardized,andmorereliableelectroniccon-trol solutions.The Zurich Instruments UHFLI instru-ment addresses this demand as it combines an arbi-trary waveform generator (AWG) for synthesis of pre-cisely shaped pulsed signals, and a 600 MHz lock-inamplifier with digitizer for detection. Combining gen-erati ona nddetec tionino neinstrument reducess etupcompl exity, improves syn hronizat ion, reduces rackspace, andenablesadvancedcontrolmethodsbasedonfeed-forwardfromdetectiontogeneration,e.g.se-quencebranching.    
+        </p>
+    </aside>
+
+    <footer style="text-align:center;font-size:30px;background-color: rgb(143, 116, 116);height:200px;width:100%;display:inline-block;">
+        <style>#footerdiv1,#footerdiv2,#footerdiv3{height: 100%;width: 33.1%;border: 1px solid black;float: left;}</style>
+        <div id="footerdiv1">My last tweet</div>
+        <div id="footerdiv2">My Picture</div>
+        <div id="footerdiv3">My friends</div>
+    </footer>
+    
+
+
+
+
+
+    </body>
+</html>                     */

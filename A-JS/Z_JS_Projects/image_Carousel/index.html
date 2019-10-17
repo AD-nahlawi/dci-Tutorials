@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    ​<link rel="stylesheet" href="/html-repo/BS.css">
+    <style>*{ box-sizing: border-box; margin: 0; padding: 0;}
+        #mainDiv{
+            position: relative;
+            border: 1px solid black;
+            height: 650px;
+        };
+        form{
+            /* position: absolute;
+            top: 24px;
+            left: 170px;
+            border: 1px solid black;
+            height: 40px; */
+        }
+        .slider {
+            /* line them up horizontally */
+            /* display: flex; */
+            /* allow for scrolling */
+            /* overflow-x: auto; */
+            /* make it smooth on iOS */
+            /* -webkit-overflow-scrolling: touch; */
+        }
+        .slider > img {
+            /* make sure the width is honored */
+            /* flex-shrink: 0; */
+        }
+        button:hover{
+            /* transition: all 1s */
+        }
+        .containerDiv{
+            display: flex;
+            width: 50vw;
+            margin: 5vw;
+            overflow: hidden;
+            position: relative;
+        }
+        span{
+            width: 10%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            z-index: 4vm;;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span:hover{
+            background: rgba(0, 0, 0,0.5);
+            cursor: pointer;
+        }
+        .right{
+            right: 0       
+        }
+        img{
+            transition: transform 0.4s ease-in-out;
+        }
+    </style>
+    <title>Tasks</title>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+            <button id="Back" class="btn btn-info">Back</button>
+            <button id="Next" class="btn btn-info">Next</button>
+            <div class="slider containerDiv" id ="mainDiv">
+                <!-- <img src="" alt=""> -->
+                <span class="left"><===</span>
+                <span class="right">===></span>
+
+                <img src="imgs/amazing-animal-beautiful-beautifull.jpg" width="690" height="636.5">
+                <img src="imgs/pexels-photo-1066176.jpeg" width="690" height="636.5">
+                <img src="imgs/pexels-photo-1266007.jpeg" width="690" height="636.5">
+                <img src="imgs/pexels-photo-1496187.jpeg" width="690" height="636.5">
+                <img src="imgs/pexels-photo-1656579.jpeg" width="690" height="636.5">
+                <img src="imgs/pexels-photo-2598761.jpeg" width="690" height="636.5">
+                <img src="imgs/pexels-photo-287240.jpeg"  width="690" height="636.5">
+            </div> 
+           
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>
+

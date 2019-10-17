@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const companies= [
+    {name: "Company One", category: "Finance", start: 1981, end: 2004},
+    {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+    {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+    {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+    {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+    {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+    {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+    {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+    {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+
+// let retailCompany = companies.filter(function(cat){
+// return cat.category == 'Retail';
+
+// // if (cat.category == 'Retail'){
+// //     return true;
+// // }
+// });
+
+
+
+// const companies80 = companies.filter(company => company.start >= 1980 && company.end <= 1990);
+const companiyNamePlusYears = companies.map(name => name.name +' '+[name.end - name.start]+' years');
+// let newArray = [companiyNamePlusYears];
+
+// let categoryArray = [];
+
+// for (let i = 0; i <= companies.length; i++){
+//      console.log(companies[i].category);
+
+
+
+
+// }
+
+
+
+
+
+
+
+
+//  let ageSort = ages.sort(function(a, b){
+//      return a - b;
+//  });
+
+// let testArray = [];
+
+
+// let canDrive1 = ages.filter(function(age){
+//     if (age >= 21){
+//         return true;
+//     }
+// });
+// console.log(canDrive1);
+
+
+// let canDrive2 = ages.filter( (age) => {return age >= 21} );
+// console.log(canDrive2);
+
+
+// let canDrive3 = ages.filter( age => age >= 21 );
+// console.log(canDrive3);,
+
+let arr = [7, 6, 5, 4, 3, 2, 1, 0];
+
+let bubbleSort = (myArray) => {
+
+for (let a = 0; a < myArray.length; a++) {
+for (let b = 0; b < myArray.length; b++) {
+
+if (myArray[b] > myArray[b + 1]){
+
+    let defValue = myArray[b];          console.log('Default value is: ' + defValue);
+    myArray[b] = myArray[b + 1]; console.log('myArray[b + 1] = ' + myArray[b]); 
+    myArray[b + 1] = defValue;          console.log('Default value again is: '  + defValue);
+    console.log('')
+}
+
+}
+}
+return myArray;
+};
+
+
+console.log(bubbleSort(arr));
+
+
+
+// const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+// let ageSum = 0;
+// for(let c = 0;c < ages.length;c++){
+// ageSum = ageSum + ages[c];
+// }
+
+
+    </script>
+</body>
+</html>

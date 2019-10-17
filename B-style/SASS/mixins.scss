@@ -1,0 +1,184 @@
+// ----------------------------------------------------------------------
+//   $my_attribute_value:red;
+//   h6{color: $my_attribute_value;}
+// ----------------------------------------------------------------------
+// @mixin    my_function($parameter1, $parameter2){color:$parameter1; background:$parameter2;}
+// h4{@include  my_function(red, blue);}
+// ----------------------------------------------------------------------
+// %my_attributes{color: chartreuse;background-color: chocolate;}
+// h5{@extend %my_attributes;}
+// ----------------------------------------------------------------------+
+// h5{animation-name: example;}
+// @keyframes example {
+//     from {background-color: red;}
+//     to {background-color: yellow;}
+//   }
+// ----------------------------------------------------------------------+
+
+@mixin my_animation($duration, $margin, $color) {
+  @keyframes my_ani {
+    from {
+      color: red;
+    }
+    to {
+      color: $color;
+      margin-left: $margin;
+    }
+  }
+  animation-name: my_ani;
+  animation-duration: $duration;
+  animation-delay: 500ms;
+  animation-iteration-count: infinite;
+}
+@mixin my_animation4($duration, $margin, $color) {
+  @keyframes my_ani {
+    from {
+      color: red;
+    }
+    to {
+      color: $color;
+      margin-left: $margin;
+    }
+  }  
+  animation-name: my_ani;
+  animation-duration: $duration;
+  animation-delay: 500ms;
+  animation-iteration-count: infinite;
+}
+%light_text {
+  background: linear-gradient(to left, red, green, blue);
+  border: 1px solid black;
+  background: linear-gradient(to);
+  color: cadetblue;
+  text-align: center;
+}
+
+@mixin my_functtion2($Color_var, $BColor_var) {
+  color: $Color_var;
+  background-color: $BColor_var;
+}
+
+@mixin hover_and_active_functtion {
+  transition: all 1000ms;
+  &:hover {
+    background-color: wheat;
+    border: 1px solid black;
+    color: black;
+  }
+  &:active {
+    background-color: indianred;
+  }
+}
+
+body {
+  font-family: "Akronim", cursive;
+  font-size: 35px;
+}
+
+header {
+  // height: 100px;
+    text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  h1 {
+    color: lighten(red, 20%);
+    text-transform: uppercase;
+  }
+  h2 {
+    color: lighten(blue, 10%);
+    text-transform: uppercase;
+  }
+}
+.nav {
+  text-align: center;
+  // height: 55px;
+  background-color: #555555;
+  .nav-ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      list-style-type: none;
+      padding: 20px;
+      a {
+        transition: all 500ms;
+        color: wheat;
+        text-decoration: none;
+        padding: 15px;
+        @include hover_and_active_functtion();
+      }
+    }
+  }
+}
+
+.text_section1 {
+  .h3_animation1 {
+    @include my_animation(1s, 10%, green);
+  }
+
+  p {
+    text-align: center;
+    @extend %light_text;
+  }
+}
+
+#text2 {
+  .h3_animation2 {
+    @include my_animation4(2s, 50%, orange);
+  }
+
+  p {
+    text-align: center;
+  }
+}
+.image_section {
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: center;
+  align-items: center;
+  img {
+    flex: 10;
+    height: 250px;
+    // width: 100%;
+    margin: 10px 5px 10px 5px;
+  }
+}
+
+footer {
+  height: 150px;
+  background: #555555;
+  .footer-ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+    a {
+      transition: all 500ms;
+      padding: 10px;
+      text-decoration: none;
+      color: wheat;
+      @include hover_and_active_functtion();
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      text-align: center;
+    }
+  }
+
+  .image_section2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
