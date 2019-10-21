@@ -42,12 +42,12 @@ const dns = require ('dns');
 // });
 
 
-for( let i = 0; i <= 100; i++ ) {
+for( let ports = 0; ports <= 100; ports++ ) {
 
-    dns.lookupService('192.168.178.100', i , (error, hostname, services ) => {  // lookupService('ip',port,(error, hostnames, services)=>{})
+    dns.lookupService( '192.168.178.100', ports , (error, hostname, services ) => {  // lookupService('ip',port,(error, hostnames, services)=>{})
     if ( error ) {
         throw error;
     };
-        console.log( hostname,'port : ' + i + ' on service ' + services );
+        console.log( hostname , 'port : ' + ports + ' on service ' + services );
     });
 };
