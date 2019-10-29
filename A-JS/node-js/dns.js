@@ -9,29 +9,29 @@ const dns = require ('dns');
 // })
 
 
-// dns.resolve4('www.google.com',( error, addressess )=>{  // resolve4('www.x.com',(error, addressess)=>{})
-//     if ( error ) throw error;
+dns.resolve4('www.google.com',( error, addressess )=>{  // resolve4('www.x.com',(error, addressess)=>{})
+    if ( error ) throw error;
 
-//     console.log(`addresses: ${ JSON.stringify( addressess ) }`);
+    console.log(`addresses: ${ JSON.stringify( addressess ) }`);
 
-//     addressess.forEach( ( addresss ) => {
+    addressess.forEach( ( addresss ) => {
 
-//         dns.reverse( addresss, ( error, hostnames )=> {
-//                if( error ) throw error;
+        dns.reverse( addresss, ( error, hostnames )=> {
+               if( error ) throw error;
 
-//         console.log(`reserve for  ${ addresss } : ${ JSON.stringify( hostnames ) }`);
+        console.log(`reserve for  ${ addresss } : ${ JSON.stringify( hostnames ) }`);
         
-//         });
-//     });
-// });
-
-
-for( let ports = 0; ports <= 100; ports++ ) {
-
-    dns.lookupService( '192.168.178.100', ports , (error, hostname, services ) => {  // lookupService('ip',port,(error, hostnames, services)=>{})
-    if ( error ) {
-        throw error;
-    };
-        console.log( hostname , 'port : ' + ports + ' on service ' + services );
+        });
     });
-};
+});
+
+
+// for( let ports = 0; ports <= 100; ports++ ) {
+
+//     dns.lookupService( '192.168.178.100', ports , (error, hostname, services ) => {  // lookupService('ip',port,(error, hostnames, services)=>{})
+//     if ( error ) {
+//         throw error;
+//     };
+//         console.log( hostname , 'port : ' + ports + ' on service ' + services );
+//     });
+// };

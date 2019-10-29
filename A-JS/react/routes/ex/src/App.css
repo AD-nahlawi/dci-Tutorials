@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+.header{
+  height: 70px;
+}
+.navbar{
+  border: 1px solid black;
+  height: 40px;
+}
+#me-img{
+  padding: 20px 60px 15px 40px ;
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+#me-div{
+  float: left;
+  width: 73%;
+  height: 500px;
+}
+ul{
+  background-color: cadetblue;
+  border: 1px solid black;
+
+}
+li{
+  list-style-type: none;
+  padding: 10px;
+  float: left;
+  
+
+}
+li:hover{
+  background-color: chocolate;
+}
+
+.me,.hobbies,.contact{
+  padding: 10px;
+  text-decoration: none;
+
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}

@@ -1,44 +1,48 @@
 import React,{Component} from 'react';
 import './App.css';
 import Header from './Header';
-import SearchResult from './SearchResult';
+import SearchResult, {SearchInput, SearchButton} from './SearchResult';
 
-export  function SearchInput( props ) {
-  return (
-      <form onSubmit = {props.submit}>
-          <input />
-          <button> Search </button>
-      </form>
-  )
-}
 
 export default class App extends Component {
 
-  submit(e) {
-    e.preventDefault();
+
+constructor(props) {
+      super(props)
+
+    this.state = { 
+
+      searchTerm:'',
+      lastSearchTerm:''
+
+    }
+
+}
+  
+  search = (e) => {
+    this.setState({ searchTerm : e.target.value })
 
   }
 
+  searchFor = () => {
+    this.setState({ lastSearchTerm : this.state.searchTerm })
+
+  } 
+
   render() {
+    console.log(this.state.lastSearchTerm)
     return (
-      <div className="App">
+      <div className = "App">
         <Header/>
-        <SearchInput submit = {(e) => this.submit(e)}/>
-        <table className="SearchResult">
-          <thead>
-              <tr>
-                  <th>Id</th>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Email</th>
-              </tr>
-          </thead>
-          <tbody /* key = {index} */>
-            <SearchResult/>
-          </tbody>
-        </table>
+        <SearchInput onChange  = {this.search} />
+        <SearchButton onClick  = {this.searchFor} />
+        <SearchResult searchFor = {this.state.lastSearchTerm}/>
       </div>
     )
   }
+
+
+
+
 }
 
