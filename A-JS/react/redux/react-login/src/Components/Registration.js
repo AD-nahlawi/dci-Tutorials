@@ -26,7 +26,9 @@ class Registration extends Component {
     }
 
     handleRedirect = () => {
+        
         if (this.state.redirect){
+            console.log('redirected! ');
             return <Redirect to = '/Home'/>
         }else{
             return null
@@ -62,10 +64,9 @@ class Registration extends Component {
     render() {
         return (
             <div>
-                {this.handleRedirect()}
+
                 <h1>Fill the data and register ! </h1>
                 <form onSubmit = {this.handleForm}>
-
                     <label htmlFor = 'username'>Username: </label>
                     <input name = 'username' type = 'text'
                     placeholder = 'your name' 
@@ -88,6 +89,8 @@ class Registration extends Component {
                     />
 
                     <input name = 'submit' type = 'submit'/>
+                    {this.handleRedirect()}
+
                 </form>
             </div>
         )
@@ -100,9 +103,10 @@ const mapStateToProps = (state) => {
         usersArray : state.usersArray
     })
 }
+
 const mapDispatchToProps = (dispatch) => ({
 
-    RegisterUser: (userinfo) => dispatch(saveRegistration(userinfo))
+    RegisterUser: (userinfo) => dispatch ( saveRegistration ( userinfo ) )
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Registration)

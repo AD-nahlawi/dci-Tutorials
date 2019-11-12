@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter, Switch, Route , NavLink } from 'react-router-dom';
 
-import Home from './Components/Home.js'
-import Login from './Components/Login.js'
-import Registration from './Components/Registration.js'
+import Home from './Components/Home.js.js.js'
+import Login from './Components/Login.js.js.js'
+import Registration from './Components/Registration.js.js.js'
 
 
 

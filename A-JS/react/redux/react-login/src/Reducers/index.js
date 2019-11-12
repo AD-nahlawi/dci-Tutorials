@@ -1,4 +1,5 @@
 const initialState = {
+    
     usersArray:[
         {
             id:1,
@@ -18,6 +19,7 @@ const initialState = {
 }
 
 const usersReducer = (state = initialState, action) =>{
+    
     switch(action.type){
 
     case 'LOGIN_ACTION':
@@ -38,7 +40,7 @@ const usersReducer = (state = initialState, action) =>{
 
     case 'REGISTER_ACTION':
         let newUserArray = [...state.usersArray];
-        let newID = newUserArray.length + 1;
+        let newID = newUserArray.length + 1;  //???????
         let newUser = {
             id: newID,
             ...action.userinfo

@@ -7,9 +7,11 @@ export const checkLogin = (username, password) => {
 }
 
 export const saveRegistration = (userinfo) => {
+    console.log('the user info is: ' + userinfo.age)
     return({
         type:'REGISTER_ACTION',
         userinfo
+        
     })
 }
 
