@@ -5,17 +5,31 @@ import {BrowserRouter, Switch, Route , NavLink } from 'react-router-dom';
 import Home from './Components/Home'
 import Login from './Components/Login'
 import Registration from './Components/Registration'
-
+import {ClearLocalStorge} from './Storage'
 
 
 class App extends React.Component{
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       
+    }
+  }
+  clear = () =>{
+      localStorage.clear();
+  }
+
   render(){
   return (
         <BrowserRouter>
         <div className = 'App'>
 
               <NavLink  className = '' to = '/Registration'>Registration</NavLink><br/>
-              <NavLink  className = '' to = '/Login'>Login</NavLink>
+              <NavLink  className = '' to = '/Login'>Login</NavLink><br/>
+
+              <ClearLocalStorge onClick = {()=> this.clear ()}></ClearLocalStorge>
+
         </div>
 
         <div className = 'App'>

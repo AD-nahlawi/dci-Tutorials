@@ -1,56 +1,78 @@
-const initialState = {
+import { loadStateFromLocalStorge } from '../Storage';
+
+
+let initialState = {
     
     usersArray:[
         {
             id:1,
-            username:'Peter',
+            username:'User_1',
             age:30, 
-            password:'peter12345'
-        },
-        {
-            id:2,
-            username:'dcistudent',
-            age:33, 
-            password:'dci123'
+            password:'12345'
         }
     ],
+    
     logedIn: false,
     logedUser: {}
 }
 
-const usersReducer = (state = initialState, action) =>{
+
+
+
+
+let defaultState = loadStateFromLocalStorge()
+
+if (defaultState === null){
+    console.log('Empty LocalStorge');
     
-    switch(action.type){
+}else{
+    initialState = defaultState;
+    console.log(initialState);
+}
 
-    case 'LOGIN_ACTION':
-        let success = false;
-        let logedUser = {};
-        state.usersArray.forEach((user) =>{
-            if( user.username === action.username &&  user.password === action.password ){
-                success = true;
-                logedUser = user;
-            }
-        })
-    return {
-        ...state,
-        logedIn: success,
-        logedUser:logedUser
-    }
 
+
+
+
+
+const usersReducer = (state = initialState, action) =>{
+    // action = Object { type: "REGISTER_ACTION", userinfo: {…} }
+switch(action.type){
 
     case 'REGISTER_ACTION':
         let newUserArray = [...state.usersArray];
-        let newID = newUserArray.length + 1;  //???????
+        let newID = newUserArray.length + 1; 
         let newUser = {
-            id: newID,
-            ...action.userinfo
-        }
+            ...action.userinfo,
+            id: newID
+        }     
+
         newUserArray.push(newUser)
+
         return({
             usersArray: newUserArray,
             logedIn: true,
             logedUser: newUser
         })
+
+
+    case 'LOGIN_ACTION':
+            let success = false;
+            let logedUser = {};
+            state.usersArray.forEach((user) =>{
+        if( user.username === action.username &&  user.password === action.password ){
+            success = true;
+            logedUser = user;
+            alert('Success')
+        }
+        })
+        
+        return {
+            ...state,
+            logedIn: success,
+            logedUser:logedUser
+        }
+
     case 'LOGOUT_ACTION':
         return({
             ...state,
@@ -58,8 +80,9 @@ const usersReducer = (state = initialState, action) =>{
             logedUser: {}
         })
     
+
     default: 
-    return state
+        return state;
     }
 }
 export default usersReducer;
