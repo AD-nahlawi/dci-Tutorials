@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import {Redirect} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {logout} from '../Actions/index';
-import {Card, CardTitle, CardText, CardGroup,
- CardBody} from 'reactstrap'
+// import {Card, CardTitle, CardText, CardGroup,
+//  CardBody} from 'reactstrap'
  class Home extends Component {
      constructor(props) {
          super(props)

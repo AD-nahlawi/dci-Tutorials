@@ -12,7 +12,7 @@ const dns = require ('dns');
 dns.resolve4('www.google.com',( error, addressess )=>{  // resolve4('www.x.com',(error, addressess)=>{})
     if ( error ) throw error;
 
-    console.log(`addresses: ${ JSON.stringify( addressess ) }`);
+    console.log(`the addresses is:  ${ JSON.stringify( addressess ) }`);
 
     addressess.forEach( ( addresss ) => {
 
@@ -20,7 +20,6 @@ dns.resolve4('www.google.com',( error, addressess )=>{  // resolve4('www.x.com',
                if( error ) throw error;
 
         console.log(`reserve for  ${ addresss } : ${ JSON.stringify( hostnames ) }`);
-        
         });
     });
 });
