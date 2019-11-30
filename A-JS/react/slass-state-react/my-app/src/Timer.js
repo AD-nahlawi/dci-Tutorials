@@ -20,7 +20,7 @@ export default class Timer extends Component {
       
 
         this.setState({
-           counter: this.state.counter+1,
+           counter: this.state.counter + 100000 / 2 * 4,
            message:'btn was Clicked'
         })
     }
