@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body>
+
+
+    <h3>EJS exgine from users.ejs</h3>
+    <h3> <%= userList[0] %></h3>
+    <h3> <%= userList[1] %></h3>
+    <h3> <%= userList[2] %></h3>
+
+
+    <p id="users"></p>
+
+
+    <script>
+
+        var list = '<%= userList %>';
+        document.getElementById('users').innerHTML = list;
+
+    </script>
+</body>
+</html>
