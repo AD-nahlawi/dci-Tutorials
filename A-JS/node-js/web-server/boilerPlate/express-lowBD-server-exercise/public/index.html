@@ -1,0 +1,127 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+<h2>Database Manager</h2>
+
+ 
+<form action="/getapi" method="POST" class="formClass">
+
+  <h3>POSTing Data</h3>
+
+  User Name: <input value="username" type="text" name  = "username"><br>
+  Email: <input value="email" type="text" name  ="email"><br>
+  Street:<input value="street" type="text" name  ="street"><br><br>
+  <input type="submit" >
+  
+
+</form>
+
+
+<div class="formClass">
+    <h3>GETing Data</h3>
+
+    IDnumber: <input type="number"class="inputNumber"><br>
+    User Name: <input type="text" placeholder="GET Data BY Username (Optional)"><br>
+    Email: <input type="text" placeholder="GET Data BY Email (Optional)"><br>
+    Street: <input type="text" placeholder="GET Data BY Street (Optional)" ><br>
+    <button onclick="fetchingData()">Submit Query</button>
+</div>
+
+
+
+
+
+
+
+
+<form class="formClass">
+
+    <h3>UPDATEing Data</h3>
+
+    IDnumber: <input type="number" name  ="id" class="inputNumber"><br>
+    User Name: <input type="text"  name  = "username"><br>
+    Email: <input type="text" name  ="email"><br>
+    Street: <input type="text" name  ="street"><br>
+
+  <input type="submit" >
+</form>
+
+
+
+
+
+
+<form class="formClass">
+    <h3>DELETEing Data</h3>
+    IDnumber: <input type="number" name  ="id" class="inputNumber"><br>
+    User Name: <input type="text"  name  = "username"><br>
+    Email: <input type="text" name  ="email"><br>
+    Street: <input type="text" name  ="street"><br>
+    <input type="submit" >
+</form>
+
+<button onclick="Clear()">Reload</button><br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>UserName</th>
+            <th>email</th>
+            <th>street</th>
+        </tr>
+    </thead>
+    <tbody id="bodyTable">
+
+    </tbody>
+</table>
+
+<script>
+
+
+  
+    
+function fetchingData(){
+  fetch('/getapi')
+    .then(( json ) => { return json.json() })
+    .then(( data ) => {
+      
+      let jsonData = data.map(( item )=>{
+
+          return ` <tr>
+                      <td>${item.id}</td>
+                      <td>${item.username}</td>
+                      <td>${item.email}</td>
+                      <td>${item.address.street}</td>
+                    </tr>`
+
+                  })
+
+     document.getElementById('bodyTable').innerHTML = jsonData
+
+  })
+}
+
+function Clear(){
+  location.reload(true)
+}
+ 
+
+ 
+
+
+  // document.getElementById('id').innerHTML = data ;
+  // document.getElementById('UserName').innerHTML = data ;
+  // document.getElementById('email').innerHTML = data ;
+  // document.getElementById('street').innerHTML = data ;
+
+
+</script>
+</body>
+</html>
