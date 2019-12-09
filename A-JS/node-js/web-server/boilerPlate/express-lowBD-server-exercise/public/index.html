@@ -10,27 +10,28 @@
 <h2>Database Manager</h2>
 
  
-<form action="/getapi" method="POST" class="formClass">
+<form action="/posting/" method="POST" class="formClass">
 
-  <h3>POSTing Data</h3>
+  <h3>POST Data</h3>
 
-  User Name: <input value="username" type="text" name  = "username"><br>
-  Email: <input value="email" type="text" name  ="email"><br>
-  Street:<input value="street" type="text" name  ="street"><br><br>
-  <input type="submit" >
+  User Name:  <input value="Ahmad" type="text" name = "username"><br>
+  Email:      <input value="Ahmad@" type="text" name  ="email"><br>
+  Street:     <input value="Raja-ilinauk" type="text" name  ="street"><br><br>
+
+  <input type="submit" value="POST Data" >
   
 
 </form>
 
 
 <div class="formClass">
-    <h3>GETing Data</h3>
+    <h3>GET Data</h3>
 
-    IDnumber: <input type="number"class="inputNumber"><br>
-    User Name: <input type="text" placeholder="GET Data BY Username (Optional)"><br>
+    IDnumber: <input  type="number" class="inputNumber"><br>
+    <!-- User Name: <input type="text" placeholder="GET Data BY Username (Optional)"><br>
     Email: <input type="text" placeholder="GET Data BY Email (Optional)"><br>
-    Street: <input type="text" placeholder="GET Data BY Street (Optional)" ><br>
-    <button onclick="fetchingData()">Submit Query</button>
+    Street: <input type="text" placeholder="GET Data BY Street (Optional)" ><br> -->
+    <button onclick="fetchingData()">GET Data</button>
 </div>
 
 
@@ -40,16 +41,16 @@
 
 
 
-<form class="formClass">
+<form class="formClass" action="/updating/" method="POST">
 
-    <h3>UPDATEing Data</h3>
+    <h3>UPDATE Data</h3>
 
-    IDnumber: <input type="number" name  ="id" class="inputNumber"><br>
+    IDnumber: <input  type="number" name = "id" class = "inputNumber"><br>
     User Name: <input type="text"  name  = "username"><br>
     Email: <input type="text" name  ="email"><br>
     Street: <input type="text" name  ="street"><br>
 
-  <input type="submit" >
+  <input type="submit" value="UPDATE Data">
 </form>
 
 
@@ -58,15 +59,15 @@
 
 
 <form class="formClass">
-    <h3>DELETEing Data</h3>
-    IDnumber: <input type="number" name  ="id" class="inputNumber"><br>
+    <h3>DELETE Data</h3>
+    IDnumber: <input  type="number" name  = "id" class="inputNumber"><br>
     User Name: <input type="text"  name  = "username"><br>
     Email: <input type="text" name  ="email"><br>
     Street: <input type="text" name  ="street"><br>
-    <input type="submit" >
+    <input type="submit" value="DELETE Data">
 </form>
 
-<button onclick="Clear()">Reload</button><br><br>
+<button onclick="Clear()">RELOAD</button><br><br>
 
 <table>
     <thead>
@@ -82,46 +83,6 @@
     </tbody>
 </table>
 
-<script>
-
-
-  
-    
-function fetchingData(){
-  fetch('/getapi')
-    .then(( json ) => { return json.json() })
-    .then(( data ) => {
-      
-      let jsonData = data.map(( item )=>{
-
-          return ` <tr>
-                      <td>${item.id}</td>
-                      <td>${item.username}</td>
-                      <td>${item.email}</td>
-                      <td>${item.address.street}</td>
-                    </tr>`
-
-                  })
-
-     document.getElementById('bodyTable').innerHTML = jsonData
-
-  })
-}
-
-function Clear(){
-  location.reload(true)
-}
- 
-
- 
-
-
-  // document.getElementById('id').innerHTML = data ;
-  // document.getElementById('UserName').innerHTML = data ;
-  // document.getElementById('email').innerHTML = data ;
-  // document.getElementById('street').innerHTML = data ;
-
-
-</script>
+<script src="javascripts/fetchData.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {saveRegistration} from '../Actions/index'
+import {saveRegistration} from '../Actions/actions'
 
 class Registration extends React.Component {
     
@@ -10,9 +10,9 @@ constructor(props) {
 
     this.state = {
         userinfo:{
-            username:'User_2',
-            password:'12345',
-            age:'23',
+            username:'',
+            password:'',
+            age:'',
         },
         redirect: false
 

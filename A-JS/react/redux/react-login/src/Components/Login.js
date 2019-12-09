@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Redirect} from 'react-router-dom';
 import { connect } from 'react-redux'
-import { checkLogin } from '../Actions/index'; 
+import { checkLogin } from '../Actions/actions'; 
 class Login extends Component {
     constructor(props) {
         super(props)

@@ -1,3 +1,48 @@
+  
+let randomValue = Math.floor(Math.random() * 10);
+let input = document.querySelectorAll('.inputNumber');
+    input[0].value = randomValue;
+    input[1].value = randomValue + 3;
+    input[2].value = randomValue + 4;  
+
+
+function fetchingData(){
+    document.getElementById('bodyTable').innerHTML = ''
+
+    fetch('/myapi/' + input[0].value)
+      .then(( json ) => { return json.json() })
+      .then(( data ) => {
+        
+        let jsonData = data.map(( item )=>{
+  
+            return ` <tr>
+                        <td>${item.id}</td>
+                        <td>${item.username}</td>
+                        <td>${item.email}</td>
+                        <td>${item.street}</td>
+                      </tr>`
+        })
+  
+       document.getElementById('bodyTable').innerHTML = jsonData
+  
+    })
+}
+  
+function Clear(){
+    location.reload(true)
+}
+   
+  
+   
+  
+  
+    // document.getElementById('id').innerHTML = data ;
+    // document.getElementById('UserName').innerHTML = data ;
+    // document.getElementById('email').innerHTML = data ;
+    // document.getElementById('street').innerHTML = data ;
+  
+
+
 /* function obtain_data(){   
 
     fetch('/api')
