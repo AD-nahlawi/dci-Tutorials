@@ -131,7 +131,8 @@ app.get('/deletepost/:id',(req, res)=>{
         res.send('post are deleted')
     })
 })
- 
+
+
 
 app.listen('3006',()=>{
 

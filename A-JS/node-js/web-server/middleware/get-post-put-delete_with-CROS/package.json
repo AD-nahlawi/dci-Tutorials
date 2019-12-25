@@ -14,5 +14,8 @@
     "express": "^4.17.1",
     "moment": "^2.24.0",
     "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "lowdb": "^1.0.0"
   }
 }
