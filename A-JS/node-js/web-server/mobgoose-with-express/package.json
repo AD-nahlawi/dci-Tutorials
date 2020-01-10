@@ -1,0 +1,17 @@
+{
+  "name": "mobgoose-with-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "mongoose": "^4.13.20",
+    "morgan": "^1.9.1"
+  }
+}
