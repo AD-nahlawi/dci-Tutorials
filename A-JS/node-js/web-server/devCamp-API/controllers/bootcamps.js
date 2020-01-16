@@ -1,34 +1,65 @@
-const bootcamp = require('../model/Bootcamp');
+const Bootcamp = require('../model/Bootcamp');
 
 
 exports.getBootcamps = async (req, res, next) => {
-  await bootcamp.find({}).then((data)=>{
-      res.status(200).json({success : true , msg: 'GET all bootcamps', data:data})
+  await Bootcamp.find({}).then((data)=>{
+        res.status(200).json({
+            success : true , 
+            msg: 'GET all bootcamps', 
+            data:data
+        })
 
   })
 }
-exports.getBootcampById = (req, res, next) => {
-    res.status(200).json({
-        success : true , 
-        msg: `GET bootcamp by ID:  ${req.params.id}`,
-        hostinfo:req.hostInfo
-    })
+exports.getBootcampById = async (req, res, next) => {
+    try{
+        await Bootcamp.findById(req.params.id).then((data)  => {
+            res.status(200).json({
+                success : true , 
+                msg: `success Founded :)  ${req.params.id}`,
+                //hostinfo:req.hostInfo
+                data: data
+            })
+
+        }) 
+    }catch(err){
+        res.status(400).json({
+            success : false , msg: `Cannot GET ID:  ${req.params.id}`, error: err
+        })
+    }
+
 }
 
 exports.postBootcamps = async (req, res, next) => {  // POST
-    console.log(req.body)
+    try{
+        await  Bootcamp.create(req.body)
+        const findAllBootcamps = await Bootcamp.find({})
+        
+        res.status(200).json({success : true , msg: 'new PORT is Success completed', data: findAllBootcamps})
 
-    
-    await bootcamp.create(req.body).then((data) =>{
-        res.status(200).json({success : true , msg: 'POST new bootcamps', data:data})
-
-    })
-
+    }catch(e){
+         res.status(400).json({success : false , msg: e})
+    }
 }
 
+ 
 
-exports.putBootcampById = (req, res, next) => {
-    res.status(200).json({success : true , msg: `PUT bootcamps ${req.params.id}`})
+exports.putBootcampById = async (req, res, next) => {
+
+    try{
+        var data = await Bootcamp.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true
+        })
+        res.status(200).json({success : true , msg: ` ID: ${req.params.id}, Data is updated :) `,updatedData: data})
+
+
+    }catch(err){
+        res.status(400).json({success : false , msg: ` ID: ${req.params.id}, Data is not updated :(`, error: err})
+
+    }
+
+
 }
 
 exports.deletetBootcampById = (req, res, next) => {

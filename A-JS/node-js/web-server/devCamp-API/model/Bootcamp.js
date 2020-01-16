@@ -4,9 +4,9 @@ const BootcmapSchema = new mongoose.Schema({
     name:{
         type: String,
         required:[ true, 'Please add a name '],
-        unique: true,
-        trim:true,
-        maxlength : [50, 'name can not be more than 50 charachter'],
+         unique: true,
+         trim:true,
+         maxlength : [50, 'name can not be more than 50 charachter'],
 
 
     },
@@ -19,10 +19,10 @@ const BootcmapSchema = new mongoose.Schema({
     },
     website : {
         type: String,
-        required : [ true, 'Please add a discription '],
+        required : [ true, 'Please add a website '],
         unique : true,
         maxlength: [500, 'discription can not be more than 500 charachter'],
-        // match : [ /https?:\/\/(www./)?[-a-zA-Z],   ]
+        //match : [ /https?:\/\/(www./)?[-a-zA-Z],   ]
 
 
     },
