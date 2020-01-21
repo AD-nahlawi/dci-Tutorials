@@ -6,7 +6,6 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
 // User router
-const user = require("./routes/user.routes");
 
 // Express settings
 const app = express();
@@ -41,7 +40,8 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views/partials");
 
 // Initiate API
-app.use("/user", user);
+app.use('/', require('./routes/home'))
+app.use("/signup", require("./routes/signup"));
 
 // Define PORT
 const port = 3001;
