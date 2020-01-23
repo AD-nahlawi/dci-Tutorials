@@ -14,18 +14,16 @@ router.post('/create-user', [
         }
     }) 
 ],(req, res) =>{
-    var errors = validationResult(req).array()
-    if(errors){
-        console.log('if')
+    var errors = validationResult(req)
+    if(!errors.isEmpty()){
         req.session.errors = errors
         req.session.success = false
         res.redirect('/signup')
-    }else{
-        console.log('else')
+    }
         req.session.success = true
         res.redirect('/')
 
-    }
+    
 } )
 
 router.get('/', (req, res) => {

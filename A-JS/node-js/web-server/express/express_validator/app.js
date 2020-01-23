@@ -44,7 +44,7 @@ app.use('/', require('./routes/home'))
 app.use("/signup", require("./routes/signup"));
 
 // Define PORT
-const port = 3001;
+const port = 3002;
 const server = app.listen(port, () => {
     console.log("Connected to port " + port);
 });
