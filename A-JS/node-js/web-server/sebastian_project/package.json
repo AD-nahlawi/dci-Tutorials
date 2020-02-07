@@ -1,0 +1,17 @@
+{
+  "name": "sebastian_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "concurrently \"cd server && npm start\" \"cd client && npm start \" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
